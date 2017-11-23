@@ -1,0 +1,119 @@
+{
+  "level": [
+    {
+      "type": "atlas",
+      "key": "environ",
+      "textureURL": "assets/atlas/textures.png",
+      "atlasURL": "assets/atlas/textures.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "bg",
+      "url": "assets/images/bg.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "coins",
+      "url": "assets/sprites/coins.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "dino",
+      "url": "assets/sprites/dino.png",
+      "frameWidth": 210,
+      "frameHeight": 210,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "player",
+      "url": "assets/sprites/sprite_boo.png",
+      "frameWidth": 235,
+      "frameHeight": 180,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "atlas",
+      "key": "tiles1",
+      "textureURL": "assets/atlas/tiles.png",
+      "atlasURL": "assets/atlas/tiles.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "script",
+      "key": "scene1",
+      "url": "assets/scene/scenes1.js"
+    },
+    {
+      "type": "spritesheet",
+      "key": "zanahoria",
+      "url": "assets/sprites/zanahoria.png",
+      "frameWidth": 45,
+      "frameHeight": 99,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "megaZanahoria",
+      "url": "assets/sprites/zanahoriaGigante.png",
+      "frameWidth": 182,
+      "frameHeight": 407,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "atlas",
+      "key": "tile",
+      "textureURL": "assets/atlas/scene.png",
+      "atlasURL": "assets/atlas/scene.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "tick",
+      "url": "assets/images/tick.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "barra",
+      "url": "assets/images/barra.png",
+      "overwrite": false
+    },
+    {
+      "type": "bitmapFont",
+      "key": "orange",
+      "textureURL": "assets/font/orange.png",
+      "atlasURL": "assets/font/orange.fnt",
+      "xSpacing": 0,
+      "ySpacing": 0
+    },
+    {
+      "type": "image",
+      "key": "checkpoint",
+      "url": "assets/images/checkpoint.png",
+      "overwrite": false
+    }
+  ],
+  "meta": {
+    "generated": "1511414178091",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}

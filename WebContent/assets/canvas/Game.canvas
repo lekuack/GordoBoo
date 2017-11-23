@@ -1,0 +1,3382 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "Game",
+    "sceneWidth": 3000,
+    "sceneHeight": 3000,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true,
+    "create_before": "this.game.world.setBounds(0, 0, 3000, 3000);",
+    "create_after": "_collisionLayer.setAll(\"body.immovable\", true);\r\n_collisionLayer.setAll(\"body.allowGravity\", false);\r\n_collisionWall.setAll(\"body.immovable\", true);\r\n_collisionWall.setAll(\"body.allowGravity\", false);\r\n_collisionWall.setAll(\"renderable\", false);\r\n_collisionNube.setAll(\"body.immovable\", true);\r\n_collisionNube.setAll(\"body.allowGravity\", false);\r\n_collisionNube.setAll(\"renderable\", false);\r\n_collisionNube.setAll(\"body.checkCollision.left\", false);\r\n_collisionNube.setAll(\"body.checkCollision.right\", false);\r\n_collisionNube.setAll(\"body.checkCollision.down\", false);\r\nthis.fZanahorias.setAll(\"body.allowGravity\", false);\r\nthis.cursors = this.input.keyboard.createCursorKeys();\r\nthis.game.camera.follow(_Players, Phaser.Camera.FOLLOW_LOCKON, 0.08, 0.08);\r\nscoreString =  this.game.add.bitmapText(45, 20, 'orange', '0', 65);\r\nscoreText =  this.game.add.bitmapText(155, 20, 'orange', '2', 65);\r\nscoreString.fixedToCamera = true;\r\nscoreText.fixedToCamera = true;",
+    "state_init_after": "this.physics.arcade.gravity.y = 800;",
+    "state_preload_after": "this.game.load.bitmapFont('orange', 'assets/font/orange.png', 'assets/font/orange.fnt');"
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      78,
+      163,
+      222
+    ],
+    "physicsSystem": "ARCADE",
+    "rendererRoundPixels": true,
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "6b1ad4d1-f1f0-4131-8d90-e72f834ae16d",
+    "info": {
+      "editorName": "Game",
+      "setAll": [],
+      "children": [
+        {
+          "type": "group",
+          "id": "b6299237-b812-47ef-8fc6-f5515568ea65",
+          "info": {
+            "editorName": "collisionLayer",
+            "editorPublic": true,
+            "y": 2923,
+            "physicsGroup": true,
+            "setAll": [],
+            "children": []
+          }
+        },
+        {
+          "type": "group",
+          "id": "5732c35d-057c-45fb-85e2-efb24a4ec6e5",
+          "info": {
+            "editorName": "wallfloor",
+            "setAll": [],
+            "children": [
+              {
+                "type": "tileSprite",
+                "id": "55274381-e96f-4d33-8bb9-d4b448106755",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor1",
+                  "editorPublic": true,
+                  "y": 2920,
+                  "width": 3005.9165267944336,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "32b1282d-c53e-41b4-bc1c-9d3431b0d1a5",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall",
+                  "x": 243,
+                  "y": 1346.5157470703125,
+                  "width": 48,
+                  "height": 1266.0762939453125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "3acfb3f3-ac4c-4897-a78d-d8f9aa43c827",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall1",
+                  "x": 500,
+                  "y": 2131.749755859375,
+                  "width": 48,
+                  "height": 482.250244140625
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "0c9d1ab3-f9f7-4a5b-a7e9-2ee71871fd35",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall2",
+                  "x": 2533.5,
+                  "y": 320,
+                  "width": 48,
+                  "height": 2273.55517578125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "6ad71fca-5cee-48b2-a73d-a52ca0c847c3",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall3",
+                  "x": 1980,
+                  "y": 399,
+                  "width": 48,
+                  "height": 332.41845703125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "dde90ed7-c511-42bf-b807-5d31af25c6d7",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall5",
+                  "x": 1091,
+                  "y": -1,
+                  "width": 48,
+                  "height": 338.47235107421875
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "6747216c-3b13-43b5-bf33-11b10e0e415e",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor4",
+                  "x": 1980,
+                  "y": 320,
+                  "scale.x": 0.752258132176344,
+                  "width": 800,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "8f682126-1dba-423f-9f0e-b9a7a1ad94ab",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall4",
+                  "x": 243,
+                  "y": 385,
+                  "width": 48,
+                  "height": 608.9949951171875
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "a3ee3150-e72d-4e56-bc79-51147a87e7c8",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall6",
+                  "x": 2274,
+                  "y": 758.3333129882812,
+                  "width": 48,
+                  "height": 326.20269775390625
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "e9076c6c-070e-44cf-9d47-8375dbe81b90",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall8",
+                  "x": 970,
+                  "y": 1590,
+                  "width": 48,
+                  "height": 782.5711059570312
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "4b5324cd-abed-410d-b1b4-3022a8b88247",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall7",
+                  "x": 1550,
+                  "y": 348.5696716308594,
+                  "width": 48,
+                  "height": 1291.2748107910156
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "6cfcfc2e-c9e2-4a6d-8e1b-39b3a3e176b6",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall9",
+                  "x": 2253,
+                  "y": 1339,
+                  "width": 48,
+                  "height": 610.1848754882812
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "e908ebbe-d67c-40aa-8d40-b00ab170f353",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall10",
+                  "x": 1310,
+                  "y": 1898,
+                  "width": 48,
+                  "height": 511.08697509765625
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "90e7494b-3207-47de-a2d6-25cd3441068f",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall14",
+                  "x": 1260,
+                  "y": 1305,
+                  "width": 48,
+                  "height": 282.12628173828125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "21c693fd-85cc-45a3-819f-3e9d4a05b9a0",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall12",
+                  "x": 753,
+                  "y": 1311.960693359375,
+                  "width": 48,
+                  "height": 282.12628173828125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "d04ecb66-b7d3-4cce-a7cb-98b35927a25a",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall13",
+                  "x": 513,
+                  "y": 978,
+                  "width": 48,
+                  "height": 282.12628173828125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "cc420b75-2c5d-4ddb-98de-c15d7a2d6c5b",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall11",
+                  "x": 1666,
+                  "y": 2336,
+                  "width": 48,
+                  "height": 326.20269775390625
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "798fe460-ce79-4474-97c2-d5887a147979",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall15",
+                  "x": 972,
+                  "y": 660,
+                  "width": 48,
+                  "height": 671.8919067382812
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "cc4912c1-d0df-4d02-9974-cd09532be88c",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor3",
+                  "x": 243,
+                  "y": 2592,
+                  "scale.x": 0.752258132176344,
+                  "width": 3108.6390417814255,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "30c576fe-4ca8-4d4f-b334-a979918f8be1",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor5",
+                  "x": 243.0898032784462,
+                  "y": 319,
+                  "scale.x": 0.752258132176344,
+                  "width": 1801.7512611746788,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "d8d18739-f673-4207-942b-91be0507852b",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor6",
+                  "x": 1310.185658454895,
+                  "y": 1876,
+                  "scale.x": 0.752258132176344,
+                  "width": 1317.756609916687,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "32886fb9-558b-4331-b5ee-919ffa4145d4",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor7",
+                  "x": 1236.9465613365173,
+                  "y": 641,
+                  "scale.x": 0.752258132176344,
+                  "width": 479.6484475135803,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "da1cc1c0-c233-4498-8a5c-07e5206c98f8",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor2",
+                  "x": 1549.739905834198,
+                  "y": 1013,
+                  "scale.x": 0.752258132176344,
+                  "width": 1026.5429997444153,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "d3021e4a-c7c8-440f-aaf6-014040daa0c1",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor8",
+                  "x": 1858.1545753479004,
+                  "y": 1322,
+                  "scale.x": 0.752258132176344,
+                  "width": 962.5729947090149,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "ac07fa54-e03a-4e16-93ae-fcc8d36ff4c4",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor9",
+                  "x": 969.9551555970684,
+                  "y": 1571,
+                  "scale.x": 0.752258132176344,
+                  "width": 1229.0609543463215,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "a6296075-a522-4b96-aee8-b3583675f622",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor10",
+                  "x": 1310.3707427978516,
+                  "y": 2083,
+                  "scale.x": 0.752258132176344,
+                  "width": 1317.521110534668,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "fedf48fc-9ef2-4231-9aa9-715475a915af",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor11",
+                  "x": 1665.7151856720448,
+                  "y": 2331,
+                  "scale.x": 0.752258132176344,
+                  "width": 844.2517409026623,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "b5b86fe5-8b11-45a5-a54b-f5ed1e61f347",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor12",
+                  "x": 802,
+                  "y": 2351,
+                  "scale.x": 0.752258132176344,
+                  "width": 287.8140577971935,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "471d0ce9-8bb6-4bac-904a-b95960c5a7b2",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor13",
+                  "x": 500,
+                  "y": 2123,
+                  "scale.x": 0.752258132176344,
+                  "width": 287.8140577971935,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "25fb5098-c3de-41ed-a57f-7092515d90b9",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor14",
+                  "x": 499.05145263671875,
+                  "y": 1859,
+                  "scale.x": 0.752258132176344,
+                  "width": 689.924287289381,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "1b651150-4672-4957-9b3d-9f14bdc64618",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor15",
+                  "x": 243,
+                  "y": 1517,
+                  "scale.x": 0.752258132176344,
+                  "width": 742.0419020354748,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "8007eaad-55f2-440e-981b-2d291b3a96d9",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor16",
+                  "x": -21,
+                  "y": 1330,
+                  "scale.x": 0.752258132176344,
+                  "width": 416.6594862639904,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "976c95f7-089e-4a5c-9d61-5e0dfe27bec2",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor17",
+                  "x": 242.1963095664978,
+                  "y": 962,
+                  "scale.x": 0.752258132176344,
+                  "width": 423.33555218577385,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "bf28b16d-d69e-460f-82cc-877b2369e168",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor18",
+                  "x": 753,
+                  "y": 1268,
+                  "scale.x": 0.752258132176344,
+                  "width": 355.0655021369457,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "1b90a79c-4dbe-4046-9f62-3597fdec833f",
+                "asset": "1",
+                "info": {
+                  "editorName": "wall16",
+                  "x": 776,
+                  "y": 668.545654296875,
+                  "width": 48,
+                  "height": 412.58062744140625
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "8de031a7-d341-4951-871b-c50d8a1f0efd",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor19",
+                  "x": 499.73951721191406,
+                  "y": 642,
+                  "scale.x": 0.752258132176344,
+                  "width": 691.4097237586975,
+                  "height": 80
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "dfd84416-9e52-4861-b745-64b40904f4ca",
+                "asset": "0",
+                "info": {
+                  "editorName": "floor20",
+                  "x": 972,
+                  "y": 962,
+                  "scale.x": 0.752258132176344,
+                  "width": 431.30062341690063,
+                  "height": 80
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "id": "5f9e75ab-042d-4249-aea3-4f060c993fd0",
+          "info": {
+            "editorName": "collisionWall",
+            "editorPublic": true,
+            "physicsGroup": true,
+            "setAll": [],
+            "children": [
+              {
+                "type": "atlas-sprite",
+                "id": "b3925f21-fd09-400e-8a05-d86b5a7166c5",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision2",
+                  "x": 253,
+                  "y": 2496,
+                  "scale.x": 2.5031003762270325,
+                  "scale.y": -94.70957543016107
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8c2b058b-1106-4480-8f6e-d49e646472f1",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision3",
+                  "x": 2543,
+                  "y": 2599,
+                  "scale.x": 1.673823311462682,
+                  "scale.y": -186.58033903431894
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c366a0d2-7abd-4cbb-bbe7-b3ca0fd08cf1",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision21",
+                  "x": 2004,
+                  "y": 388,
+                  "scale.x": 46.564595514482626,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "64a0230f-bd68-4f20-bf8c-c8bfb835c6d0",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision22",
+                  "x": 2022,
+                  "y": 378,
+                  "scale.x": -1.5566859728565958,
+                  "scale.y": 28.528565112188485
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c1b77a60-db43-43f7-a458-8973175cc372",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision23",
+                  "x": 284,
+                  "y": 320,
+                  "scale.x": -3.267116237918572,
+                  "scale.y": 58.36407105193124
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4dc65851-769a-4441-854d-bd7efb865269",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision24",
+                  "x": 1571,
+                  "y": 387,
+                  "scale.x": -109.00783065675155,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ab906de3-44c4-4aae-8da7-a0b85d60d5b4",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision25",
+                  "x": 1090,
+                  "scale.x": 4.135188085005381,
+                  "scale.y": 27.660507044017567
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "aa356c0a-a385-4973-a799-3a48178e1db9",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision26",
+                  "x": 546,
+                  "y": 2630,
+                  "scale.x": -3.8467961027385944,
+                  "scale.y": -42.16218666080563
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "7539cb17-2007-4352-976a-cc6168c47886",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision27",
+                  "x": 1590,
+                  "y": 320,
+                  "scale.x": -3.4047797535061135,
+                  "scale.y": 107.01322572786343
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c59860cd-3cf5-4d8a-8a6a-e5ca8596a223",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision28",
+                  "x": 2555,
+                  "y": 2634,
+                  "scale.x": -191.319007236253,
+                  "scale.y": -3.5788404755047183
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "58ce8b98-50c0-4cec-97f8-61d585b87f6d",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision29",
+                  "x": 1571,
+                  "y": 708,
+                  "scale.x": -27.33360256240451,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "5f231c7d-addc-48ef-aaf1-6998e85cd330",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision30",
+                  "x": 1566,
+                  "y": 1071,
+                  "scale.x": 60.82285120214266,
+                  "scale.y": -4.735981294086474
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "9bc49084-bce9-404a-96c5-74b445e528af",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision31",
+                  "x": 2309,
+                  "y": 758,
+                  "scale.x": -1.9492742599098645,
+                  "scale.y": 26.201710003306534
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "71d3dcc3-4094-42b3-9b62-0c76605c1244",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision36",
+                  "x": 1885,
+                  "y": 1389,
+                  "scale.x": 56.01171716091804,
+                  "scale.y": -5.617608645185549
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "215b6baa-10c2-47de-beac-44b140797a7f",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision37",
+                  "x": 970,
+                  "y": 1629,
+                  "scale.x": 76.53783613298272,
+                  "scale.y": -4.778833355549358
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "573a51be-19ee-40bf-b85b-9d036803a335",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision38",
+                  "x": 283,
+                  "y": 1399,
+                  "scale.x": -22.9896897138171,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "25f8f7de-8e47-436d-89c5-a673e0b968de",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision39",
+                  "x": 552,
+                  "y": 1020,
+                  "scale.x": -23.589142348205247,
+                  "scale.y": -4.740314993269011
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "77c04ccc-29cb-4b81-abe0-1dbb43dcdd09",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision40",
+                  "x": 995,
+                  "y": 1327,
+                  "scale.x": -19.039553517706956,
+                  "scale.y": -4.9157856117799925
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "d3619551-a201-4b24-afcf-b65a4fd8b7c0",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision42",
+                  "x": 992,
+                  "y": 1025,
+                  "scale.x": 24.49655230367685,
+                  "scale.y": -4.915785860087708
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ef4ddc80-78be-4050-8a9c-deb84f04bf1e",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision43",
+                  "x": 993,
+                  "y": 696,
+                  "scale.x": -40.065219853784704,
+                  "scale.y": -4.432178566531168
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f76b9426-d5ce-42d1-a8d3-d5b2cceafb28",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision44",
+                  "x": 991,
+                  "y": 1911,
+                  "scale.x": -40.13595080848429,
+                  "scale.y": -4.370548324164223
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "9535bb09-44de-4fcb-9002-7a1e5fd9e2ec",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision45",
+                  "x": 2280,
+                  "y": 2381,
+                  "scale.x": -50.24979253939457,
+                  "scale.y": -4.111718875621688
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "045d8ff3-0149-49e4-bf64-74db084dd78b",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision46",
+                  "x": 2279,
+                  "y": 2151,
+                  "scale.x": -78.91718675874542,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "aa13466a-bab8-4a4c-a112-a1af009ed582",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision47",
+                  "x": 2280,
+                  "y": 1943,
+                  "scale.x": -80.20343655249033,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8f80dbb8-3af9-49e6-98c0-01b056279502",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision48",
+                  "x": 707,
+                  "y": 2177,
+                  "scale.x": -16.239712543323442,
+                  "scale.y": -4.475935898188787
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "d90341dd-c102-41ab-8c07-13c119ea03e4",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision49",
+                  "x": 986,
+                  "y": 2412,
+                  "scale.x": -14.236158576992713,
+                  "scale.y": -5.144636921716567
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "be54c989-b164-4c49-915b-7cb12b19adcf",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision50",
+                  "x": 2287,
+                  "y": 1382,
+                  "scale.x": -1.6234686455336327,
+                  "scale.y": 46.794182020105495
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "903cad71-86ed-41f6-b993-cd6e55929c71",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision51",
+                  "x": 1349,
+                  "y": 1886,
+                  "scale.x": -2.7000780066486527,
+                  "scale.y": 40.76394815227564
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8262754e-7fa9-4729-9c29-b71301392730",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision52",
+                  "x": 1017,
+                  "y": 1606,
+                  "scale.x": -3.9207351431559054,
+                  "scale.y": 67.48219563948557
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ad7c1ac7-863a-4bab-b09a-06fd1c809a84",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision53",
+                  "x": 1015,
+                  "y": 643,
+                  "scale.x": -2.7700268772999084,
+                  "scale.y": 57.044484498459035
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c4a0e758-a3d6-4fdf-9be9-5be705371177",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision54",
+                  "x": 1701,
+                  "y": 2338,
+                  "scale.x": -2.0692490614040078,
+                  "scale.y": 23.148691356649266
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8ac8f534-ef70-4a77-8cf4-3052d7ebd6fa",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision55",
+                  "x": 1305,
+                  "y": 1306,
+                  "scale.x": -3.7631070175973798,
+                  "scale.y": 23.148691356649266
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "70138300-78b3-423c-a6df-90c735cf280c",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision56",
+                  "x": 823,
+                  "y": 678,
+                  "scale.x": -3.527923283833396,
+                  "scale.y": 33.33445155263621
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "2c81e0e4-5a49-4401-892d-66c2ec9508ec",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision57",
+                  "x": 801,
+                  "y": 1275,
+                  "scale.x": -3.060037746311011,
+                  "scale.y": 24.82045455595163
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "23c8234e-061e-4be7-b116-578b777b453a",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision58",
+                  "x": 551,
+                  "y": 967,
+                  "scale.x": -2.915043649427046,
+                  "scale.y": 24.139373659158196
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b8c6d230-9dc9-4d0c-bd63-70f78d243f9a",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision59",
+                  "x": 3006,
+                  "y": 2963,
+                  "scale.x": -251.52809531611334,
+                  "scale.y": -3.5788404755047183
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "396084e5-25e4-4aff-8c01-ab1a25276482",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision41",
+                  "x": 801,
+                  "y": 1588,
+                  "scale.x": -44.98274031542837,
+                  "scale.y": -5.664737954196323
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "78f5eb1b-05da-42b4-a08a-0a5e0ebf86ad",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision85",
+                  "x": -25,
+                  "y": 2962,
+                  "scale.x": 2.5031003762270325,
+                  "scale.y": -255.11514820604654
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c61b165b-e315-4528-8492-fdebfb72566f",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision86",
+                  "x": 3000,
+                  "y": 2988,
+                  "scale.x": 2.5031003762270325,
+                  "scale.y": -255.11514820604654
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "id": "4b8d2ff2-5306-4a9d-a5bd-1bd8c535f726",
+          "info": {
+            "editorName": "zanahorias",
+            "editorPublic": true,
+            "x": 192,
+            "y": 2899,
+            "physicsGroup": true,
+            "setAll": [],
+            "children": [
+              {
+                "type": "spritesheet",
+                "id": "8ab3eb13-3462-4ed8-8a52-1d356043a1d7",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria",
+                  "editorPublic": true,
+                  "x": 312,
+                  "y": -55,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "2f717b1d-1a3f-415b-85d2-a7561c1633e0",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria1",
+                  "editorPublic": true,
+                  "x": 354,
+                  "y": -38,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "a5e875e4-9937-4be1-93fd-9c8863683164",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria2",
+                  "editorPublic": true,
+                  "x": 436,
+                  "y": -39,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "d5565f84-692d-43e9-8733-c4e63d5d054b",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria3",
+                  "editorPublic": true,
+                  "x": 470,
+                  "y": -35,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "7d8276b3-eecd-400b-ace4-5c6d8febe203",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria4",
+                  "editorPublic": true,
+                  "x": 1918,
+                  "y": -41,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "5bdb056d-4205-44ae-865f-96c229e1c1fe",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria5",
+                  "editorPublic": true,
+                  "x": 1950,
+                  "y": -49,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "5f724639-0862-45ed-a246-c1983a954a2d",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria6",
+                  "editorPublic": true,
+                  "x": 1982,
+                  "y": -38,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "2b326374-7c57-48bd-b78c-b18bcf514294",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria7",
+                  "editorPublic": true,
+                  "x": 2013,
+                  "y": -50,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "1f5e24f7-4250-470c-8686-4a34d7847229",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria8",
+                  "editorPublic": true,
+                  "x": 2046,
+                  "y": -40,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "47f1b7da-2b17-491e-95a0-9a4412e6c92e",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria9",
+                  "editorPublic": true,
+                  "x": 2076,
+                  "y": -44,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "76e83f82-108a-4904-85e6-d34d58c06ca5",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria10",
+                  "editorPublic": true,
+                  "x": 2106,
+                  "y": -38,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "fa3d25f0-eeff-4358-b1e9-e807ed0e763f",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria11",
+                  "editorPublic": true,
+                  "x": 1973,
+                  "y": -1981,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "5ed3c508-a41e-44d1-9bc9-6f19b06930f5",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria12",
+                  "editorPublic": true,
+                  "x": 1943,
+                  "y": -1957,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "821906d4-021e-490b-a748-168032e4a92a",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria13",
+                  "editorPublic": true,
+                  "x": 1915,
+                  "y": -1982,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "2f9524d6-873e-4a49-98c1-70a2a76ce6c0",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria14",
+                  "editorPublic": true,
+                  "x": 1886,
+                  "y": -1957,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "d8e271b8-65ab-4e61-a197-d6f187a6cb03",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria15",
+                  "editorPublic": true,
+                  "x": 1855,
+                  "y": -1977,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "1d57a8b8-a5aa-4364-9fed-63a6d90e7c99",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria16",
+                  "editorPublic": true,
+                  "x": 1824,
+                  "y": -1956,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "5fdb4bea-c73e-4196-b6cc-0ccc10567f32",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria17",
+                  "editorPublic": true,
+                  "x": 513,
+                  "y": -1110,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "196743d7-19ef-4da5-94b2-efaa1ac40590",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria18",
+                  "editorPublic": true,
+                  "x": 553,
+                  "y": -1134,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "664b541f-6d75-4268-8fd0-bdc36ea6cbcd",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria19",
+                  "editorPublic": true,
+                  "x": 591,
+                  "y": -1110,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "a53d0687-494b-4f43-8e9e-04af896116fd",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria20",
+                  "editorPublic": true,
+                  "x": 631,
+                  "y": -1128,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "c4408126-5d08-4cbb-af1c-1a25006487ae",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria21",
+                  "editorPublic": true,
+                  "x": 668,
+                  "y": -1107,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "df71a018-3899-479f-845f-fe7626353d68",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria22",
+                  "editorPublic": true,
+                  "x": 476,
+                  "y": -1137,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "b7fe7f3b-26de-4e62-94ba-15e7794cab53",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria23",
+                  "editorPublic": true,
+                  "x": 115,
+                  "y": -1458,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "16d65ef8-d802-4a51-877b-593b47a847ef",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria24",
+                  "editorPublic": true,
+                  "x": 151,
+                  "y": -1463,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "56471107-f07c-4471-9a70-f317695d2416",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria25",
+                  "editorPublic": true,
+                  "x": 183,
+                  "y": -1474,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "9e9ccc4f-d604-428a-94c2-378cc35b48fd",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria26",
+                  "editorPublic": true,
+                  "x": 215,
+                  "y": -1466,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "e7179245-c456-4b86-8720-8002bc211cc3",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria27",
+                  "editorPublic": true,
+                  "x": 268,
+                  "y": -1529,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "bc61545a-acc2-408f-ba75-79d099d84c8c",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria28",
+                  "editorPublic": true,
+                  "x": 303,
+                  "y": -1534,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "1bad0785-f8d0-4029-a103-d99e6dcf870b",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria29",
+                  "editorPublic": true,
+                  "x": 249,
+                  "y": -1459,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "774ece91-abad-4e57-a79e-2a8cab7c7205",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria30",
+                  "editorPublic": true,
+                  "x": 283,
+                  "y": -1464,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "bb3136eb-5bbc-4008-bbda-4e486e85b0f6",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria31",
+                  "editorPublic": true,
+                  "x": 347,
+                  "y": -1469,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "7dcc85f5-daa6-412c-b153-e4f59664d0ac",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria32",
+                  "editorPublic": true,
+                  "x": 315,
+                  "y": -1465,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "8a9ff871-8c95-4c5c-8560-0c6c7719b83f",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria33",
+                  "editorPublic": true,
+                  "x": 1366,
+                  "y": -1086,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "6ce5f1d9-2676-4bf2-a74c-ef7f4f277221",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria34",
+                  "editorPublic": true,
+                  "x": 1331,
+                  "y": -1095,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "28f47dda-fcf3-4fc2-ac72-ec8cc5b70534",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria35",
+                  "editorPublic": true,
+                  "x": 1298,
+                  "y": -1088,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "16d007fb-664f-4d41-b3b1-9a95a04410df",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria36",
+                  "editorPublic": true,
+                  "x": 1265,
+                  "y": -1097,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "29495a0a-32f7-488e-9bb1-d28307194a8a",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria37",
+                  "editorPublic": true,
+                  "x": 1234,
+                  "y": -1082,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "3aa43159-2d43-487e-bfd9-2f66c3a739c8",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria38",
+                  "editorPublic": true,
+                  "x": 1203,
+                  "y": -1098,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "a8bb7c48-dd63-4779-bfa2-0709112491ec",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria39",
+                  "editorPublic": true,
+                  "x": 2017,
+                  "y": -387,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "fea80a27-3c4c-41e0-bef4-ec2ba4b703a7",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria40",
+                  "editorPublic": true,
+                  "x": 1986,
+                  "y": -407,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "4714f18e-9a8b-401a-85e8-7dd06f728885",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria41",
+                  "editorPublic": true,
+                  "x": 1955,
+                  "y": -384,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "bd13bc63-3406-496f-9121-2e881f16fd2e",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria42",
+                  "editorPublic": true,
+                  "x": 1921,
+                  "y": -402,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "961f39c6-5bc1-4959-ad93-d25eb94db590",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria43",
+                  "editorPublic": true,
+                  "x": 1888,
+                  "y": -383,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "c686bedd-fb0f-4f26-b165-d0c280dc104b",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria44",
+                  "editorPublic": true,
+                  "x": 1856,
+                  "y": -401,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "bac81ecb-6ebc-4df3-b109-aa21f78afda6",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria45",
+                  "editorPublic": true,
+                  "x": 1823,
+                  "y": -379,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "50160d36-c437-4106-8049-0fca7d393c0d",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria46",
+                  "editorPublic": true,
+                  "x": 1789,
+                  "y": -399,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "dc016a67-f9bb-4119-9a49-998ec73deeb7",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria47",
+                  "editorPublic": true,
+                  "x": 1758,
+                  "y": -372,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "50471f83-8198-49e1-a9b8-485cd9b075d5",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria48",
+                  "editorPublic": true,
+                  "x": 502,
+                  "y": -2331,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "8f29571e-1537-420a-8099-23b15bb22b96",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria49",
+                  "editorPublic": true,
+                  "x": 465,
+                  "y": -2339,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "447eb3d6-2de3-46df-b755-b444f6f9b0a7",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria50",
+                  "editorPublic": true,
+                  "x": 435,
+                  "y": -2319,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "756aaf86-910c-4868-af9d-3a00a9494e24",
+                "asset": "3",
+                "info": {
+                  "editorName": "zanahoria51",
+                  "editorPublic": true,
+                  "x": 401,
+                  "y": -2341,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "id": "b7ee11eb-0a90-4c2a-aa92-901ef59a1149",
+          "info": {
+            "editorName": "scene",
+            "setAll": [],
+            "children": [
+              {
+                "type": "atlas-sprite",
+                "id": "cf15af57-e3e2-4870-bb6b-d297bf33d97d",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_",
+                  "editorPublic": true,
+                  "x": 288,
+                  "y": 2810
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "13226ab9-7894-45d8-adc5-6167c36de8ff",
+                "asset": "5",
+                "info": {
+                  "editorName": "number_",
+                  "editorPublic": true,
+                  "x": 340,
+                  "y": 2795
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e2f84c41-455d-49c2-b698-06fe3164ff9a",
+                "asset": "6",
+                "info": {
+                  "editorName": "cartel_final",
+                  "x": 399,
+                  "y": 196
+                }
+              },
+              {
+                "type": "spritesheet",
+                "id": "5f57b936-142c-4837-a3b8-8733f8d867c0",
+                "asset": "7",
+                "info": {
+                  "editorName": "megaZanahoria",
+                  "x": 827,
+                  "y": 74,
+                  "scale.x": 0.6,
+                  "scale.y": 0.6
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "0f451b9f-3765-4cba-9bae-900a5e9a3547",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_1",
+                  "editorPublic": true,
+                  "x": 1685,
+                  "y": 906
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "50e43884-62fc-47a1-afeb-1ca7687551cd",
+                "asset": "8",
+                "info": {
+                  "editorName": "number_1",
+                  "x": 1730,
+                  "y": 889
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "88438d0b-271f-4b71-973b-db99d20fa6b1",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_2",
+                  "editorPublic": true,
+                  "x": 509,
+                  "y": 1750
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8610e9c8-7dd4-4afc-a225-ad8861e9d3e7",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_3",
+                  "editorPublic": true,
+                  "x": 572,
+                  "y": 1411
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "878b44eb-061c-4ad0-8533-786b31635517",
+                "asset": "9",
+                "info": {
+                  "editorName": "three",
+                  "x": 1531,
+                  "y": 2473
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1a42e17f-6dd5-4e96-9cc5-6cefa87b39fb",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_6",
+                  "x": 1668,
+                  "y": 1765
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "36fd30cd-ffdf-4d8a-9511-16b1a6bf147b",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_7",
+                  "x": 807,
+                  "y": 535
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ed2e408e-7c78-4140-85d8-f1ae23c5a8a0",
+                "asset": "10",
+                "info": {
+                  "editorName": "number_2",
+                  "x": 861,
+                  "y": 514
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c207c056-7e5b-4a7f-8194-832e2392cd52",
+                "asset": "11",
+                "info": {
+                  "editorName": "number_3",
+                  "x": 618,
+                  "y": 1385,
+                  "scale.x": 0.6,
+                  "scale.y": 0.6
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4405a6f7-712a-4a2d-8788-ee0b3efd6885",
+                "asset": "12",
+                "info": {
+                  "editorName": "number_4",
+                  "x": 553,
+                  "y": 1727
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e38c81ae-6939-4130-b653-95960891b676",
+                "asset": "13",
+                "info": {
+                  "editorName": "rock",
+                  "x": 1099,
+                  "y": 1524
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "136d9ecf-e512-4b2c-81e2-6e5f66c1a2c0",
+                "asset": "14",
+                "info": {
+                  "editorName": "hongo",
+                  "x": 633,
+                  "y": 2563
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f123090c-c8b8-41cd-820b-d3b2608b00f6",
+                "asset": "15",
+                "info": {
+                  "editorName": "cartel_4",
+                  "x": 1819,
+                  "y": 2809
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e139dc30-6d8f-478c-90da-eb86da0db7f8",
+                "asset": "4",
+                "info": {
+                  "editorName": "cartel_5",
+                  "x": 2283,
+                  "y": 2481
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c2335f6a-c539-484e-bd04-4e2802523a25",
+                "asset": "16",
+                "info": {
+                  "editorName": "number_5",
+                  "x": 1713,
+                  "y": 1749
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a18890f8-2b5c-4d33-a9e4-1c60772af710",
+                "asset": "17",
+                "info": {
+                  "editorName": "number_6",
+                  "x": 2341,
+                  "y": 2475
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "74f1317e-8d50-4c73-b3f1-0ef8b7cfdc71",
+                "asset": "18",
+                "info": {
+                  "editorName": "number_7",
+                  "x": 1961,
+                  "y": 2801
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "spritesheet",
+          "id": "20755ffb-b4c7-4ea0-8f18-767c6af1a14d",
+          "asset": "19",
+          "info": {
+            "editorName": "Players",
+            "editorPublic": true,
+            "x": 54,
+            "y": 2476,
+            "scale.x": 0.5,
+            "scale.y": 0.5,
+            "data": "",
+            "animations": [
+              {
+                "name": "walk",
+                "frameRate": 8,
+                "loop": true,
+                "public": true,
+                "frames": [
+                  "0",
+                  "3",
+                  "4"
+                ]
+              },
+              {
+                "name": "stay",
+                "frameRate": 8,
+                "loop": true,
+                "public": true,
+                "autoPlay": true,
+                "frames": ["4"]
+              },
+              {
+                "name": "jump",
+                "frameRate": 2,
+                "public": true,
+                "frames": [
+                  "1",
+                  "2",
+                  "2"
+                ]
+              }
+            ],
+            "body": {
+              "type": "ARCADE_RECT",
+              "offsetX": 101.13134765625,
+              "offsetY": 69.14111328125,
+              "width": 84.33447265625,
+              "height": 103.634765625
+            }
+          }
+        },
+        {
+          "type": "group",
+          "id": "ba89a8ec-893c-45b0-8803-8456ef04c7b8",
+          "info": {
+            "editorName": "Nubes",
+            "setAll": [],
+            "children": [
+              {
+                "type": "atlas-sprite",
+                "id": "70f8a62b-7b08-4b16-880e-f34eda57c8ff",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube",
+                  "x": 2848,
+                  "y": 2784,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "93fd3b5e-b112-4e26-9264-9d9cc39c071e",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube2",
+                  "x": 2720,
+                  "y": 2656,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "3d582188-79ee-4be8-a23e-dd55f1b8a145",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube1",
+                  "x": 2848,
+                  "y": 2528,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "684921e7-f8d3-4d77-8e04-14c24fffce1f",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube3",
+                  "x": 2622,
+                  "y": 2429,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a7647c3d-0053-4770-af29-5b53d0af1070",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube4",
+                  "x": 2848,
+                  "y": 2304,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ddce2214-120f-4c45-a5ed-20eba8f1e38f",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube5",
+                  "x": 2688,
+                  "y": 2176,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "caf0ea45-baff-4109-89d7-bbecdea680d1",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube6",
+                  "x": 2816,
+                  "y": 2048,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8789d492-10cf-44ab-aed8-0336441fb018",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube7",
+                  "x": 2592,
+                  "y": 1952,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "9aea777c-e82c-4755-b101-dd698a7a648c",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube8",
+                  "x": 2848,
+                  "y": 1824,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1a2bd9c7-6109-4609-8fb5-f4e7d5e43837",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube9",
+                  "x": 2624,
+                  "y": 1696,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "5791647d-234e-4b85-be4b-1441920f7d13",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube10",
+                  "x": 2848,
+                  "y": 1536,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b1516732-c5df-4804-98b4-58d7d2880d3a",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube11",
+                  "x": 2606,
+                  "y": 1382,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8acee140-ac8f-4217-b389-1b7b27857f0d",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube12",
+                  "x": 2844,
+                  "y": 1238,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "10e1b595-8d07-4380-bd9a-36e320ba34a1",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube13",
+                  "x": 2692,
+                  "y": 1085,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "20af8bc8-ed7d-4d46-b29a-3b225e891269",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube14",
+                  "x": 2581,
+                  "y": 894,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "7036d463-ccef-403e-9526-182768edc9f4",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube15",
+                  "x": 2846,
+                  "y": 777,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "055704d9-43a5-41a6-9da5-ebd3b0bf21e3",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube16",
+                  "x": 2631,
+                  "y": 618,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "bdf11997-40e5-4f5c-840f-dda4a1857372",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube17",
+                  "x": 2871,
+                  "y": 478,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "18ec091e-dbf2-4e66-b6a3-8c82b8617918",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube18",
+                  "x": 2762,
+                  "y": 321,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b87df4c6-c66a-4d77-8a87-7575f4f264c4",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube19",
+                  "x": 1578,
+                  "y": 423,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "14d8d354-0988-46a1-b2bc-6ca7869fce47",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube20",
+                  "x": 1875,
+                  "y": 579,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c98b29ca-100d-45bc-8f26-427eb9314c8d",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube21",
+                  "x": 1634,
+                  "y": 715,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b9e0ccbc-a2a4-41f6-a0cb-c30b21a687f9",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube22",
+                  "x": 2176,
+                  "y": 837,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ff2b1fd6-4402-4e03-bdca-6592039a0bbc",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube23",
+                  "x": 575,
+                  "y": 2425,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "2d70d3dc-d628-427d-8035-83759dd41004",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube24",
+                  "x": 735,
+                  "y": 2184,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "32b07f5a-c973-4720-ba99-9403863a6d05",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube25",
+                  "x": 1204,
+                  "y": 1990,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "51368394-a6f8-4271-9824-4b0324486188",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube26",
+                  "x": 1023,
+                  "y": 2131,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "2b3961c4-a82a-4f32-8604-b438ef53614b",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube27",
+                  "x": 1219,
+                  "y": 2318,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1006b1eb-85a6-4726-b5e0-23a47997263e",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube28",
+                  "x": 2412,
+                  "y": 2413,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "279b011a-d72c-4f6f-816f-caa261dbec9a",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube29",
+                  "x": 1465,
+                  "y": 2418,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4bc60790-4115-4f0c-9b0f-96a0f9317cbc",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube30",
+                  "x": 2434,
+                  "y": 1118,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "acc77984-cd39-4b27-990e-9996e2ffc1cd",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube31",
+                  "x": 318,
+                  "y": 1998,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "80876a59-2242-4715-a070-219b7473720f",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube32",
+                  "x": 850,
+                  "y": 1682,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8e5ec33c-d1c3-4862-b53e-1284a1a1c563",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube33",
+                  "x": 304,
+                  "y": 1364,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fbd471ac-6db8-4e70-bfa7-03853099123c",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube34",
+                  "x": 1121,
+                  "y": 1382,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "045c261b-dcf4-492c-8769-b4efa3970b43",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube35",
+                  "x": 1394,
+                  "y": 1385,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "96df772b-197e-4be4-adf5-46a62d1fd7cc",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube36",
+                  "x": 1362,
+                  "y": 1140,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "93a2f90d-7af0-48cf-a863-d3b4f01b7bb8",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube37",
+                  "x": 1010,
+                  "y": 775,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "14db34e0-a601-448c-8035-52081824988e",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube38",
+                  "x": 285,
+                  "y": 777,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "5487dc69-f721-4ebe-891b-2d832399a672",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube39",
+                  "x": 527,
+                  "y": 1133,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "03459e00-d869-44d5-8129-347ce9eb78be",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube40",
+                  "x": 684,
+                  "y": 1003,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "35be3bc4-8d97-43db-8883-83fe0f7807e5",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube41",
+                  "x": 667,
+                  "y": 1354,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "47a50bdf-b972-4423-bf3c-959a8969b6f0",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube42",
+                  "x": 5,
+                  "y": 1163,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "cafd533b-d478-40e3-b35c-2472b6e80eb7",
+                "asset": "22",
+                "info": {
+                  "editorName": "nube43",
+                  "x": 135,
+                  "y": 668,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "86756ca1-e30f-4167-9049-897838ecb6d6",
+                "asset": "20",
+                "info": {
+                  "editorName": "nube44",
+                  "y": 836,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "897d5350-3f09-420d-951d-909ab236cfe4",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube45",
+                  "x": 141,
+                  "y": 1016,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e61e544a-3e70-4dea-9176-ada83e30081d",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube46",
+                  "y": 496,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a4dc4123-6e6f-4a7b-8bb4-b26a533b67ed",
+                "asset": "21",
+                "info": {
+                  "editorName": "nube47",
+                  "x": 69,
+                  "y": 378,
+                  "scale.x": 0.7,
+                  "scale.y": 0.7
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "id": "a0a12a09-5013-46c5-adf1-888af1c7358b",
+          "info": {
+            "editorName": "collisionNube",
+            "editorPublic": true,
+            "y": -4,
+            "renderable": false,
+            "physicsGroup": true,
+            "setAll": [],
+            "children": [
+              {
+                "type": "atlas-sprite",
+                "id": "8c83ec55-1a40-498f-8b0c-798b6d116fd7",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision14",
+                  "x": 2869,
+                  "y": 1244,
+                  "scale.x": 5.715494717174952
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "77f62af4-daf5-41e3-b11b-2754d15d7010",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision15",
+                  "x": 2721,
+                  "y": 1092,
+                  "scale.x": 5.291321003134633
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "be262e2c-9d32-4664-8276-953f71b10f39",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision16",
+                  "x": 2614,
+                  "y": 907,
+                  "scale.x": 5.180542351664855
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "2a70eb4e-63d3-444f-a92f-378594a362ac",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision17",
+                  "x": 2870,
+                  "y": 786,
+                  "scale.x": 5.209350239767342
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b60e21de-f9b8-4e8a-b875-d38353c957a9",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision18",
+                  "x": 2656,
+                  "y": 626,
+                  "scale.x": 5.364135656801429
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b68787ba-8b21-4d07-9bde-8e39152e0120",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision19",
+                  "x": 2894,
+                  "y": 486,
+                  "scale.x": 5.828532002296028
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "99cfbd6f-c4e8-4f57-a4bc-9675f3a6f342",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision20",
+                  "x": 2787,
+                  "y": 328,
+                  "scale.x": 5.828511381105945
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f0c1e423-ea42-4b01-90a6-837514e88596",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision11",
+                  "x": 2866,
+                  "y": 1545,
+                  "scale.x": 5.862283863929115,
+                  "scale.y": 0.89300537109375
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "84785140-88cb-42d3-a338-998895178959",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision",
+                  "x": 2877,
+                  "y": 2791,
+                  "scale.x": 4.744954516159401
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ac41bda8-ed7e-4ca0-96fd-86ffe7990d96",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision1",
+                  "x": 2744,
+                  "y": 2662,
+                  "scale.x": 5.408630326751212
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "d4470e52-ba4e-4229-ad37-0e453d83be2d",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision12",
+                  "x": 2873,
+                  "y": 2536,
+                  "scale.x": 5.1338090051837995
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "9e8bd972-15f3-4df4-a6ce-bb646523f16a",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision4",
+                  "x": 2650,
+                  "y": 2438,
+                  "scale.x": 5.4433797408977656
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4c8b9f0a-eb52-4edf-bb88-0138d86ad76d",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision5",
+                  "x": 2867,
+                  "y": 2312,
+                  "scale.x": 6.20867934174618
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "2536de78-4b3d-4c02-a661-6592adc967af",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision6",
+                  "x": 2713,
+                  "y": 2185,
+                  "scale.x": 5.4491780705661865
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "8d6d104c-762e-408c-96d0-21535b348a33",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision7",
+                  "x": 2840,
+                  "y": 2055,
+                  "scale.x": 5.655558537455847
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1a63644d-87e8-4189-9d91-189afa2d78c8",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision8",
+                  "x": 2613,
+                  "y": 1960,
+                  "scale.x": 6.148417580620925
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e4f73ec7-cf65-404e-8d54-aa285bb3a1a2",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision9",
+                  "x": 2870,
+                  "y": 1832,
+                  "scale.x": 5.828511627760956
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a017689d-da9a-4b85-a2d3-59d0b6d32dca",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision10",
+                  "x": 2652,
+                  "y": 1704,
+                  "scale.x": 5.157755452390457
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "538d2c50-5211-4ca8-8b68-597cf6b892d6",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision13",
+                  "x": 2635,
+                  "y": 1390,
+                  "scale.x": 5.512898849964219
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f094d07f-ddeb-4527-bab5-f23c478d79f2",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision32",
+                  "x": 1620,
+                  "y": 429,
+                  "scale.x": 4.249623586551775
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "bae15c34-2a75-4734-b0f7-9e85154905f2",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision33",
+                  "x": 1904,
+                  "y": 586,
+                  "scale.x": 4.992635156390999
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "04b76f70-3bf3-4c2b-8aeb-c721037f07e7",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision34",
+                  "x": 1656,
+                  "y": 721,
+                  "scale.x": 5.178385305712788
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "42f5157e-e7a0-4994-b009-40e105b7c486",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision35",
+                  "x": 2205,
+                  "y": 845,
+                  "scale.x": 4.12579318945187
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e642be61-085e-4755-a4ea-18f40c9c19fd",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision60",
+                  "x": 605,
+                  "y": 2434,
+                  "scale.x": 5.203333175513878
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "81ba52de-c1a5-4185-ac80-4be4e82de8f3",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision61",
+                  "x": 767,
+                  "y": 2194,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f2d13f5a-d807-428d-afda-0ce127f9f96a",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision62",
+                  "x": 345,
+                  "y": 2008,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "892326c1-786d-4d8e-9cc6-d2dc865d0c0f",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision63",
+                  "x": 1495,
+                  "y": 2430,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f7b042b5-d6a0-478d-9033-f86274ae104f",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision64",
+                  "x": 1236,
+                  "y": 2328,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fe8426a2-36fb-453e-9d5b-0954c097a84d",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision65",
+                  "x": 1054,
+                  "y": 2140,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "693cac22-17fe-401e-90a8-011f683e8ab8",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision66",
+                  "x": 1222,
+                  "y": 1999,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fd61f504-275c-48b4-a52a-26577815d838",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision67",
+                  "x": 2437,
+                  "y": 2423,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "3fc14f70-3fe3-42e7-b32a-9494da8487ea",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision68",
+                  "x": 2454,
+                  "y": 1127,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b73fb220-96e6-4573-8aa5-41c4d4026a13",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision69",
+                  "x": 339,
+                  "y": 1372,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4457451f-195d-4c53-b2e6-271c4cc5f1fa",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision70",
+                  "x": 870,
+                  "y": 1690,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4ed59e52-9cf5-4d75-93a6-b1fe93c05ea4",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision71",
+                  "x": 1149,
+                  "y": 1394,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "cab70a20-3822-4fd5-b527-ff49e1d06b08",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision72",
+                  "x": 1420,
+                  "y": 1395,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "f6d3bc69-a416-4f8c-9a3b-0017626b096e",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision73",
+                  "x": 1374,
+                  "y": 1153,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e8cb6741-dc4b-4d94-b4fa-2a90e14b9731",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision74",
+                  "x": 1035,
+                  "y": 789,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "766f0f41-1ec0-4fbc-bc94-f03f36e55fb1",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision75",
+                  "x": 553,
+                  "y": 1142,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "e35dccc3-2514-4da7-b174-58d61495647d",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision76",
+                  "x": 719,
+                  "y": 1013,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a4949690-a9a3-4027-ac37-1587b9067741",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision77",
+                  "x": 306,
+                  "y": 787,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "de5fc1e9-6749-4828-8f10-ede4f18db568",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision78",
+                  "x": 694,
+                  "y": 1363,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "2de84eba-939b-4b7f-9191-e24f65254146",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision79",
+                  "x": 34,
+                  "y": 1176,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fd5dfdf6-ba4b-4d84-a5cd-fe49171f66df",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision80",
+                  "x": 170,
+                  "y": 1027,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b7627277-ddf1-4817-bf41-662ad570e87f",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision81",
+                  "x": 32,
+                  "y": 847,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "27f4ac2d-85b4-4b92-8d6d-282c4388be8f",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision82",
+                  "x": 164,
+                  "y": 680,
+                  "scale.x": 5.331125683450341
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1e438848-486c-4c59-ad74-1b2ed7541dd8",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision83",
+                  "x": 12,
+                  "y": 505,
+                  "scale.x": 2.85443230000962
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "702e90fc-f7f1-43d7-b437-2b8c7cb66fe2",
+                "asset": "2",
+                "info": {
+                  "editorName": "collision84",
+                  "x": 91,
+                  "y": 387,
+                  "scale.x": 5.331125683450341
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "id": "4d82c938-54dc-41df-8fad-39dcc9efe31b",
+          "asset": "23",
+          "info": {
+            "editorName": "barra",
+            "editorPublic": true,
+            "x": 15,
+            "y": 15,
+            "scale.x": 0.5,
+            "scale.y": 0.5,
+            "fixedToCamera": true
+          }
+        },
+        {
+          "type": "group",
+          "id": "a7f89cb2-5342-4e38-9620-9d42e0c597aa",
+          "info": {
+            "editorName": "checkpoints",
+            "editorPublic": true,
+            "physicsGroup": true,
+            "setAll": [
+              {
+                "key": "body.allowGravity",
+                "value": "false"
+              },
+              {
+                "key": "renderable",
+                "value": "false"
+              }
+            ],
+            "children": [
+              {
+                "type": "image",
+                "id": "83adec73-13e7-4837-95d6-e3e3c3f93016",
+                "asset": "24",
+                "info": {
+                  "editorName": "checkpoint",
+                  "editorPublic": true,
+                  "x": 2518,
+                  "y": 2635,
+                  "scale.x": 0.34450180868252944,
+                  "scale.y": 1.9202201246215993
+                }
+              },
+              {
+                "type": "image",
+                "id": "58ee665b-a7af-49f7-b3db-1c5eff56d96b",
+                "asset": "24",
+                "info": {
+                  "editorName": "checkpoint1",
+                  "editorPublic": true,
+                  "x": 1345,
+                  "y": 2634,
+                  "scale.x": 0.34450180868252944,
+                  "scale.y": 1.9202201246215993
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "id": "9b1ed9a6-2562-4a39-a25d-b3d65303c135",
+          "asset": "25",
+          "info": {
+            "editorName": "tick",
+            "editorPublic": true,
+            "x": 550,
+            "y": 300,
+            "alpha": 0,
+            "fixedToCamera": true,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "group",
+          "id": "e7545c98-f8ef-4f61-bb6b-ac2fcb3f387a",
+          "info": {
+            "editorName": "NewLevels",
+            "editorPublic": true,
+            "x": 356,
+            "y": 389,
+            "physicsGroup": true,
+            "setAll": [
+              {
+                "key": "body.allowGravity",
+                "value": "false"
+              },
+              {
+                "key": "renderable",
+                "value": "false"
+              }
+            ],
+            "children": [{
+              "type": "image",
+              "id": "b8a87995-3c60-4657-a024-67dce60234ce",
+              "asset": "24",
+              "info": {
+                "editorName": "newLevel",
+                "name": "inicio5",
+                "x": 1456,
+                "y": 2255,
+                "scale.x": 0.04686664652910362,
+                "scale.y": 1.9202201246215993
+              }
+            }]
+          }
+        }
+      ]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tiles1",
+      "sprite": "floor"
+    },
+    "1": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "wall"
+    },
+    "2": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "collision"
+    },
+    "3": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "zanahoria",
+      "sprite": "0"
+    },
+    "4": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "cartel_01"
+    },
+    "5": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-2"
+    },
+    "6": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "cartel_final"
+    },
+    "7": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "megaZanahoria",
+      "sprite": "0"
+    },
+    "8": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-3"
+    },
+    "9": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "three"
+    },
+    "10": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-1"
+    },
+    "11": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-9"
+    },
+    "12": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-6"
+    },
+    "13": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "rock"
+    },
+    "14": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "hongo"
+    },
+    "15": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "cartel_02"
+    },
+    "16": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-4"
+    },
+    "17": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-7"
+    },
+    "18": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tile",
+      "sprite": "number-5"
+    },
+    "19": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "player",
+      "sprite": "0"
+    },
+    "20": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tiles1",
+      "sprite": "nube2"
+    },
+    "21": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tiles1",
+      "sprite": "nube1"
+    },
+    "22": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tiles1",
+      "sprite": "nube3"
+    },
+    "23": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "barra"
+    },
+    "24": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "checkpoint"
+    },
+    "25": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "tick"
+    }
+  },
+  "prefab-table": {}
+}

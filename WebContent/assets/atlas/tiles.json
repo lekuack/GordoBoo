@@ -1,0 +1,129 @@
+{
+  "frames": {
+    "cartel_01": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 372,
+        "w": 166,
+        "h": 111
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 166,
+        "h": 111
+      },
+      "sourceSize": {
+        "w": 168,
+        "h": 114
+      }
+    },
+    "floor": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 80,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      }
+    },
+    "floor2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 84,
+        "y": 2,
+        "w": 80,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      }
+    },
+    "nube1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 276,
+        "w": 175,
+        "h": 94
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 175,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 175,
+        "h": 94
+      }
+    },
+    "nube2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 180,
+        "w": 175,
+        "h": 94
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 175,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 175,
+        "h": 94
+      }
+    },
+    "nube3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 84,
+        "w": 175,
+        "h": 94
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 175,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 175,
+        "h": 94
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "tiles.png"
+  }
+}

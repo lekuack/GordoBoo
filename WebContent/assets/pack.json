@@ -1,37 +1,10 @@
 {
   "level": [
     {
-      "type": "atlas",
-      "key": "environ",
-      "textureURL": "assets/atlas/textures.png",
-      "atlasURL": "assets/atlas/textures.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
       "type": "image",
       "key": "bg",
       "url": "assets/images/bg.png",
       "overwrite": false
-    },
-    {
-      "type": "spritesheet",
-      "key": "coins",
-      "url": "assets/sprites/coins.png",
-      "frameWidth": 128,
-      "frameHeight": 128,
-      "frameMax": -1,
-      "margin": 0,
-      "spacing": 0
-    },
-    {
-      "type": "spritesheet",
-      "key": "dino",
-      "url": "assets/sprites/dino.png",
-      "frameWidth": 210,
-      "frameHeight": 210,
-      "frameMax": -1,
-      "margin": 0,
-      "spacing": 0
     },
     {
       "type": "spritesheet",
@@ -49,11 +22,6 @@
       "textureURL": "assets/atlas/tiles.png",
       "atlasURL": "assets/atlas/tiles.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "script",
-      "key": "scene1",
-      "url": "assets/scene/scenes1.js"
     },
     {
       "type": "spritesheet",
@@ -107,10 +75,76 @@
       "key": "checkpoint",
       "url": "assets/images/checkpoint.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "btn-play",
+      "url": "assets/images/btn-play.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finish",
+      "url": "assets/images/finish.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gameOvers",
+      "url": "assets/images/game-over.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "loading",
+      "url": "assets/images/load.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "menu",
+      "url": "assets/images/menu.jpg",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "menu1",
+      "url": "assets/images/menu.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "btnPlay",
+      "url": "assets/images/btn-play.png",
+      "frameWidth": 360,
+      "frameHeight": 163,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "Preloaders",
+      "url": "assets/images/load.png",
+      "frameWidth": 1200,
+      "frameHeight": 800,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "btn-start",
+      "url": "assets/images/btn-start.png",
+      "frameWidth": 179,
+      "frameHeight": 78,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
     }
   ],
   "meta": {
-    "generated": "1511414178091",
+    "generated": "1511480838806",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

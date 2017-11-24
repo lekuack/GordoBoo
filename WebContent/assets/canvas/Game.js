@@ -149,10 +149,10 @@ Game.prototype.create = function () {
 	_collision2.scale.setTo(2.5031003762270325, -94.70957543016107);
 	
 	var _collision3 = this.add.sprite(2543, 2599, 'tile', 'collision', _collisionWall);
-	_collision3.scale.setTo(1.673823311462682, -186.58033903431894);
+	_collision3.scale.setTo(3.113845928376527, -186.58033903431894);
 	
 	var _collision21 = this.add.sprite(2004, 388, 'tile', 'collision', _collisionWall);
-	_collision21.scale.setTo(46.564595514482626, -5.664737954196323);
+	_collision21.scale.setTo(48.156025721204905, -5.664737954196323);
 	
 	var _collision22 = this.add.sprite(2022, 378, 'tile', 'collision', _collisionWall);
 	_collision22.scale.setTo(-1.5566859728565958, 28.528565112188485);
@@ -172,8 +172,8 @@ Game.prototype.create = function () {
 	var _collision27 = this.add.sprite(1590, 320, 'tile', 'collision', _collisionWall);
 	_collision27.scale.setTo(-3.4047797535061135, 107.01322572786343);
 	
-	var _collision28 = this.add.sprite(2555, 2634, 'tile', 'collision', _collisionWall);
-	_collision28.scale.setTo(-191.319007236253, -3.5788404755047183);
+	var _collision28 = this.add.sprite(2581, 2634, 'tile', 'collision', _collisionWall);
+	_collision28.scale.setTo(-191.79901198047574, -3.5788404755047183);
 	
 	var _collision29 = this.add.sprite(1571, 708, 'tile', 'collision', _collisionWall);
 	_collision29.scale.setTo(-27.33360256240451, -5.664737954196323);
@@ -247,7 +247,7 @@ Game.prototype.create = function () {
 	var _collision57 = this.add.sprite(801, 1275, 'tile', 'collision', _collisionWall);
 	_collision57.scale.setTo(-3.060037746311011, 24.82045455595163);
 	
-	var _collision58 = this.add.sprite(551, 967, 'tile', 'collision', _collisionWall);
+	var _collision58 = this.add.sprite(558, 967, 'tile', 'collision', _collisionWall);
 	_collision58.scale.setTo(-2.915043649427046, 24.139373659158196);
 	
 	var _collision59 = this.add.sprite(3006, 2963, 'tile', 'collision', _collisionWall);
@@ -274,7 +274,7 @@ Game.prototype.create = function () {
 	var _zanahoria2 = this.add.sprite(436, -39, 'zanahoria', 0, _zanahorias);
 	_zanahoria2.scale.setTo(0.7, 0.7);
 	
-	var _zanahoria3 = this.add.sprite(470, -35, 'zanahoria', 0, _zanahorias);
+	var _zanahoria3 = this.add.sprite(471, -35, 'zanahoria', 0, _zanahorias);
 	_zanahoria3.scale.setTo(0.7, 0.7);
 	
 	var _zanahoria4 = this.add.sprite(1918, -41, 'zanahoria', 0, _zanahorias);
@@ -429,9 +429,6 @@ Game.prototype.create = function () {
 	
 	this.add.sprite(399, 196, 'tile', 'cartel_final', _scene);
 	
-	var _megaZanahoria = this.add.sprite(827, 74, 'megaZanahoria', 0, _scene);
-	_megaZanahoria.scale.setTo(0.6, 0.6);
-	
 	var _cartel_1 = this.add.sprite(1685, 906, 'tile', 'cartel_01', _scene);
 	
 	this.add.sprite(1730, 889, 'tile', 'number-3', _scene);
@@ -467,7 +464,7 @@ Game.prototype.create = function () {
 	
 	this.add.sprite(1961, 2801, 'tile', 'number-5', _scene);
 	
-	var _Players = this.add.sprite(54, 2476, 'player', 0);
+	var _Players = this.add.sprite(61, 2491, 'player', 0);
 	_Players.scale.setTo(0.5, 0.5);
 	var _Players_walk = _Players.animations.add('walk', [0, 3, 4], 8, true);
 	var _Players_stay = _Players.animations.add('stay', [4], 8, true);
@@ -740,7 +737,7 @@ Game.prototype.create = function () {
 	var _collision74 = this.add.sprite(1035, 789, 'tile', 'collision', _collisionNube);
 	_collision74.scale.setTo(5.331125683450341, 1.0);
 	
-	var _collision75 = this.add.sprite(553, 1142, 'tile', 'collision', _collisionNube);
+	var _collision75 = this.add.sprite(558, 1142, 'tile', 'collision', _collisionNube);
 	_collision75.scale.setTo(5.331125683450341, 1.0);
 	
 	var _collision76 = this.add.sprite(719, 1013, 'tile', 'collision', _collisionNube);
@@ -770,22 +767,39 @@ Game.prototype.create = function () {
 	var _collision84 = this.add.sprite(91, 387, 'tile', 'collision', _collisionNube);
 	_collision84.scale.setTo(5.331125683450341, 1.0);
 	
-	var _barra = this.add.sprite(15, 15, 'barra');
-	_barra.scale.setTo(0.5, 0.5);
-	_barra.fixedToCamera = true;
-	
 	var _checkpoints = this.add.physicsGroup(Phaser.Physics.ARCADE);
 	
-	var _checkpoint = this.add.sprite(2518, 2635, 'checkpoint', null, _checkpoints);
-	_checkpoint.scale.setTo(0.34450180868252944, 1.9202201246215993);
+	var _checkpoint = this.add.sprite(2496, 2645, 'checkpoint', null, _checkpoints);
+	_checkpoint.name = 'check5';
+	_checkpoint.scale.setTo(0.4502120886867625, 1.7682341868707363);
 	
-	var _checkpoint1 = this.add.sprite(1345, 2634, 'checkpoint', null, _checkpoints);
+	var _checkpoint1 = this.add.sprite(911, 2623, 'checkpoint', null, _checkpoints);
+	_checkpoint1.name = 'check2';
 	_checkpoint1.scale.setTo(0.34450180868252944, 1.9202201246215993);
 	
-	var _tick = this.add.sprite(550, 300, 'tick');
-	_tick.alpha = 0.0;
-	_tick.fixedToCamera = true;
-	_tick.anchor.setTo(0.5, 0.5);
+	var _checkpoint2 = this.add.sprite(2298, 779, 'checkpoint', null, _checkpoints);
+	_checkpoint2.name = 'check3';
+	_checkpoint2.scale.setTo(1.434319089835785, 0.3787654909945811);
+	
+	var _checkpoint3 = this.add.sprite(1008, 2243, 'checkpoint', null, _checkpoints);
+	_checkpoint3.name = 'check4';
+	_checkpoint3.scale.setTo(1.8352284215369217, 0.3787654909945811);
+	
+	var _checkpoint4 = this.add.sprite(1889, 2109, 'checkpoint', null, _checkpoints);
+	_checkpoint4.name = 'check7';
+	_checkpoint4.scale.setTo(0.34450180868252944, 1.4374929822450617);
+	
+	var _checkpoint5 = this.add.sprite(973, 1308, 'checkpoint', null, _checkpoints);
+	_checkpoint5.name = 'check6';
+	_checkpoint5.scale.setTo(0.28559281614435983, 1.566765547296147);
+	
+	var _checkpoint6 = this.add.sprite(261, 648, 'checkpoint', null, _checkpoints);
+	_checkpoint6.name = 'check1';
+	_checkpoint6.scale.setTo(1.8352284215369217, 0.3787654909945811);
+	
+	var _checkpoint7 = this.add.sprite(216, 1004, 'checkpoint', null, _checkpoints);
+	_checkpoint7.name = 'check9';
+	_checkpoint7.scale.setTo(0.4238648731398037, 1.9639926630965938);
 	
 	var _NewLevels = this.add.physicsGroup(Phaser.Physics.ARCADE);
 	_NewLevels.position.setTo(356, 389);
@@ -794,10 +808,51 @@ Game.prototype.create = function () {
 	_newLevel.name = 'inicio5';
 	_newLevel.scale.setTo(0.04686664652910362, 1.9202201246215993);
 	
+	var _newLevel1 = this.add.sprite(1489, 1220, 'checkpoint', null, _NewLevels);
+	_newLevel1.name = 'inicio4';
+	_newLevel1.scale.setTo(2.495730346162737, 0.04522013725618172);
+	
+	var _newLevel2 = this.add.sprite(1215, 287, 'checkpoint', null, _NewLevels);
+	_newLevel2.name = 'inicio3';
+	_newLevel2.scale.setTo(2.495730346162737, 0.04522013725618172);
+	
+	var _newLevel3 = this.add.sprite(1913, 1966, 'checkpoint', null, _NewLevels);
+	_newLevel3.name = 'inicio7';
+	_newLevel3.scale.setTo(1.5957294906830233, 0.08612895082536108);
+	
+	var _newLevel4 = this.add.sprite(-89, 1512, 'checkpoint', null, _NewLevels);
+	_newLevel4.name = 'inicio6';
+	_newLevel4.scale.setTo(1.529621256319504, 0.03343827068397805);
+	
+	var _newLevel5 = this.add.sprite(621, 296, 'checkpoint', null, _NewLevels);
+	_newLevel5.name = 'inicio1';
+	_newLevel5.scale.setTo(1.5767490403606153, 0.05700165441591498);
+	
+	var _newLevel6 = this.add.sprite(162, 868, 'checkpoint', null, _NewLevels);
+	_newLevel6.name = 'inicio9';
+	_newLevel6.scale.setTo(1.5767490403606153, 0.17482031213118213);
+	
+	var _tick = this.add.sprite(550, 300, 'tick');
+	_tick.alpha = 0.0;
+	_tick.fixedToCamera = true;
+	_tick.anchor.setTo(0.5, 0.5);
+	
+	var _barra = this.add.sprite(16, 15, 'barra');
+	_barra.scale.setTo(0.5, 0.5);
+	_barra.fixedToCamera = true;
+	
+	var _ZanahoriaFinal = this.add.physicsGroup(Phaser.Physics.ARCADE);
+	_ZanahoriaFinal.alpha = 0.0;
+	_ZanahoriaFinal.renderable = false;
+	
+	var _megaZanahoria = this.add.sprite(827, 74, 'megaZanahoria', 0, _ZanahoriaFinal);
+	_megaZanahoria.scale.setTo(0.6, 0.6);
+	
 	_checkpoints.setAll("body.allowGravity", false);
 	_checkpoints.setAll("renderable", false);
 	_NewLevels.setAll("body.allowGravity", false);
 	_NewLevels.setAll("renderable", false);
+	_ZanahoriaFinal.setAll("body.allowGravity", false);
 	
 	
 	// public fields
@@ -868,12 +923,20 @@ Game.prototype.create = function () {
 	this.fPlayers_stay = _Players_stay;
 	this.fPlayers_jump = _Players_jump;
 	this.fCollisionNube = _collisionNube;
-	this.fBarra = _barra;
 	this.fCheckpoints = _checkpoints;
 	this.fCheckpoint = _checkpoint;
 	this.fCheckpoint1 = _checkpoint1;
-	this.fTick = _tick;
+	this.fCheckpoint2 = _checkpoint2;
+	this.fCheckpoint3 = _checkpoint3;
+	this.fCheckpoint4 = _checkpoint4;
+	this.fCheckpoint5 = _checkpoint5;
+	this.fCheckpoint6 = _checkpoint6;
+	this.fCheckpoint7 = _checkpoint7;
 	this.fNewLevels = _NewLevels;
+	this.fTick = _tick;
+	this.fBarra = _barra;
+	this.fZanahoriaFinal = _ZanahoriaFinal;
+	this.fMegaZanahoria = _megaZanahoria;
 	_collisionLayer.setAll("body.immovable", true);
 	_collisionLayer.setAll("body.allowGravity", false);
 	_collisionWall.setAll("body.immovable", true);
@@ -890,6 +953,11 @@ Game.prototype.create = function () {
 	this.game.camera.follow(_Players, Phaser.Camera.FOLLOW_LOCKON, 0.08, 0.08);
 	scoreString =  this.game.add.bitmapText(45, 20, 'orange', '0', 65);
 	scoreText =  this.game.add.bitmapText(155, 20, 'orange', '2', 65);
+	faltaText =  this.game.add.bitmapText(550, 200, 'orange', '', 40);
+	faltaText.anchor.x = 0.5;
+	faltaText.anchor.y = 1;
+	faltaText.alpha = 0;
+	faltaText.fixedToCamera = true;
 	scoreString.fixedToCamera = true;
 	scoreText.fixedToCamera = true;
 	
@@ -902,17 +970,19 @@ var score = 0;
 var scoreRequire = 2;
 var scoreString = '';
 var scoreText = '';
+var faltaText = '';
+var m1 = false; var m2 = false; var m3 = false; var m4 = false; var m5 = false; var m6 = false; var m7 = false; var m9 = false; 
 Game.prototype.update = function () {
 	this.physics.arcade.collide(this.fPlayers, this.fCollisionLayer);
 	this.physics.arcade.collide(this.fPlayers, this.fCollisionNube);
 	this.physics.arcade.collide(this.fPlayers, this.fCollisionWall);
 	this.physics.arcade.overlap(this.fPlayers, this.fZanahorias, this.playerVsZanahoria, null, this);
+	this.physics.arcade.overlap(this.fPlayers, this.fZanahoriaFinal, this.ZanahoriaFinal, null, this);
 	this.physics.arcade.overlap(this.fPlayers, this.fCheckpoints, this.checkpointFunc, null, this);
 	this.physics.arcade.overlap(this.fPlayers, this.fNewLevels, this.newLevelFunc, null, this);
 	
 	
 	if (this.cursors.left.isDown) {
-        // move to the left
 		if(route==1){
 			this.fPlayers.scale.x = -0.5;
 			this.fPlayers.body.position.x += 100;
@@ -922,7 +992,6 @@ Game.prototype.update = function () {
 		}
 		
     } else if (this.cursors.right.isDown) {
-        // move to the right
     	if(route==0){
     		this.fPlayers.scale.x = 0.5;
     		this.fPlayers.body.position.x -= 100;
@@ -932,28 +1001,21 @@ Game.prototype.update = function () {
     	}
     	
     } else {
-        // dont move in the horizontal
     	this.fPlayers.body.velocity.x = 0;
     }
- 
-    // a flag to know if the player is (down) touching the platforms
     var touching = this.fPlayers.body.touching.down;
  
-    if (touching && this.cursors.up.isDown) {
-        // jump if the player is on top of a platform and the up key is pressed
+    if (touching && this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).isDown) {
     	this.fPlayers.body.velocity.y = -550;
     }
     
     if (touching) {
         if (this.fPlayers.body.velocity.x == 0) {
-            // if it is not moving horizontally play the idle
         	this.fPlayers.play("stay");
         } else {
-            // if it is moving play the walk
         	this.fPlayers.play("walk");
         }
     } else {
-        // it is not touching the platforms so it means it is jumping.
     	this.fPlayers.play("jump");
     }
 };
@@ -982,22 +1044,140 @@ Game.prototype.playerVsZanahoria = function(player, zanahoria) {
 	scoreString.text = score;
 };
 
-Game.prototype.checkpointFunc = function(player, checkpoint) {
-	if(scoreRequire==score){
-		scoreText.text = '-';
-		score = 0;
-		scoreString.text = '-';
-		this.add.tween(this.fTick).to({
-			alpha : [1,0]
-		}, 2500, "Linear", true).onComplete.add(checkpoint.kill, checkpoint);
+Game.prototype.ZanahoriaFinal = function(player, megaZanahoria) {
+	if(m1 && m2 && m3 && m4 && m5 && m6 && m7 && m9){
+		megaZanahoria.body.enable = false;
+		this.add.tween(megaZanahoria).to({
+			y : megaZanahoria.y -1100,
+			x: megaZanahoria.x -700
+		}, 3000, "Expo.easeOut", true);
+		
+		this.add.tween(megaZanahoria.scale).to({
+			x : 10,
+			y : 10
+		}, 3000, "Linear", true);
+
+		this.add.tween(megaZanahoria).to({
+			alpha : 1
+		}, 3000, "Linear", true).onComplete.add(this.Finish, this);
 	}
 };
-Game.prototype.newLevelFunc = function(player, newLevel) {
-	if(newLevel.name=='inicio5'){
-		scoreRequire=5;
-		newLevel.kill();
+
+Game.prototype.checkpointFunc = function(player, checkpoint) {
+	checkpoint.kill;
+	if(checkpoint.name=='check7'){
+		if(scoreRequire==7){
+			m7=true;
+			if(scoreRequire==score){
+				this.add.tween(this.fTick).to({
+					alpha : [1,0]
+				}, 2500, "Linear", true).onComplete.add(checkpoint.kill, checkpoint);
+				this.Verifica(0);
+			}else{
+				this.GameOver();
+			}
+		}
+		
+	}else{
+		if(scoreRequire==score){
+			switch(checkpoint.name) {
+			case "check1":
+				m1=true;
+				break;
+			case "check2":
+				m2=true;
+				break;
+			case "check3":
+				m3=true;
+				break;
+			case "check4":
+				m4=true;
+				break;
+			case "check5":
+				m5=true;
+				break;
+			case "check6":
+				m6=true;
+				break;
+			case "check9":
+				m9=true;
+				break;
+			}
+			if(checkpoint.name=="check9"){
+				this.Verifica(1);
+				
+			}else{
+				this.Verifica(0);
+			}
+			this.add.tween(this.fTick).to({
+				alpha : [1,0]
+			}, 2500, "Linear", true).onComplete.add(checkpoint.kill, checkpoint);
+		}else{
+			this.GameOver();
+		}
 	}
+};
+
+Game.prototype.Verifica = function(checkN) {
+	if(m1 && m2 && m3 && m4 && m5 && m6 && m7 && m9){
+		scoreText.text="";
+		scoreString.text="";
+		this.game.camera.follow(this.fZanahoriaFinal, Phaser.Camera.FOLLOW_LOCKON, 0.5, 0.5);
+		this.add.tween(this.fZanahoriaFinal).to({
+			alpha : [1]
+		}, 3000, "Linear", true).onComplete.add(this.CameraF, this);
+	}else{
+		if(checkN==1){
+			score = 0;
+			scoreRequire=0;
+			scoreText.text="-";
+			scoreString.text = "-";
+			faltaText.text = "Falta 1 Desafio por Completar";
+			this.add.tween(faltaText).to({
+				alpha : [1,0.7,1,0.7,1,0.7,1,0.7,1,0.7,1,0.7,1,0.7,1,0.7,1,0]
+			}, 10000, "Linear", true);
+		}
+	}
+	
+};
+
+Game.prototype.newLevelFunc = function(player, newLevel) {
+	if(newLevel.name=='inicio1'){
+		scoreRequire=1;
+	}else if(newLevel.name=='inicio3'){
+		scoreRequire=3;
+	}else if(newLevel.name=='inicio4'){
+		scoreRequire=4;
+	}else if(newLevel.name=='inicio5'){
+		scoreRequire=5;
+	}else if(newLevel.name=='inicio7'){
+		scoreRequire=7;
+	}
+	else if(newLevel.name=='inicio6'){
+		scoreRequire=6;
+	}
+	else if(newLevel.name=='inicio9'){
+		scoreRequire=9;
+	}
+	score = 0;
+	newLevel.kill();
 	scoreText.text=scoreRequire;
 	scoreString.text = score;
 	
-}
+};
+
+Game.prototype.GameOver = function() {
+	score = 0;
+	scoreRequire=2;
+	this.state.start("GameOver");
+};
+
+Game.prototype.Finish = function() {
+	score = 0;
+	scoreRequire=2;
+	this.state.start("Finish");
+};
+Game.prototype.CameraF = function() {
+	this.game.camera.follow(this.fPlayers, Phaser.Camera.FOLLOW_LOCKON, 0.08, 0.08);
+};
+

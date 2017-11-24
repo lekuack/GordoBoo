@@ -20,7 +20,7 @@
     ],
     "showGrid": true,
     "create_before": "this.game.world.setBounds(0, 0, 3000, 3000);",
-    "create_after": "_collisionLayer.setAll(\"body.immovable\", true);\r\n_collisionLayer.setAll(\"body.allowGravity\", false);\r\n_collisionWall.setAll(\"body.immovable\", true);\r\n_collisionWall.setAll(\"body.allowGravity\", false);\r\n_collisionWall.setAll(\"renderable\", false);\r\n_collisionNube.setAll(\"body.immovable\", true);\r\n_collisionNube.setAll(\"body.allowGravity\", false);\r\n_collisionNube.setAll(\"renderable\", false);\r\n_collisionNube.setAll(\"body.checkCollision.left\", false);\r\n_collisionNube.setAll(\"body.checkCollision.right\", false);\r\n_collisionNube.setAll(\"body.checkCollision.down\", false);\r\nthis.fZanahorias.setAll(\"body.allowGravity\", false);\r\nthis.cursors = this.input.keyboard.createCursorKeys();\r\nthis.game.camera.follow(_Players, Phaser.Camera.FOLLOW_LOCKON, 0.08, 0.08);\r\nscoreString =  this.game.add.bitmapText(45, 20, 'orange', '0', 65);\r\nscoreText =  this.game.add.bitmapText(155, 20, 'orange', '2', 65);\r\nscoreString.fixedToCamera = true;\r\nscoreText.fixedToCamera = true;",
+    "create_after": "_collisionLayer.setAll(\"body.immovable\", true);\r\n_collisionLayer.setAll(\"body.allowGravity\", false);\r\n_collisionWall.setAll(\"body.immovable\", true);\r\n_collisionWall.setAll(\"body.allowGravity\", false);\r\n_collisionWall.setAll(\"renderable\", false);\r\n_collisionNube.setAll(\"body.immovable\", true);\r\n_collisionNube.setAll(\"body.allowGravity\", false);\r\n_collisionNube.setAll(\"renderable\", false);\r\n_collisionNube.setAll(\"body.checkCollision.left\", false);\r\n_collisionNube.setAll(\"body.checkCollision.right\", false);\r\n_collisionNube.setAll(\"body.checkCollision.down\", false);\r\nthis.fZanahorias.setAll(\"body.allowGravity\", false);\r\nthis.cursors = this.input.keyboard.createCursorKeys();\r\nthis.game.camera.follow(_Players, Phaser.Camera.FOLLOW_LOCKON, 0.08, 0.08);\r\nscoreString =  this.game.add.bitmapText(45, 20, 'orange', '0', 65);\r\nscoreText =  this.game.add.bitmapText(155, 20, 'orange', '2', 65);\r\nfaltaText =  this.game.add.bitmapText(550, 200, 'orange', '', 40);\r\nfaltaText.anchor.x = 0.5;\r\nfaltaText.anchor.y = 1;\r\nfaltaText.alpha = 0;\r\nfaltaText.fixedToCamera = true;\r\nscoreString.fixedToCamera = true;\r\nscoreText.fixedToCamera = true;",
     "state_init_after": "this.physics.arcade.gravity.y = 800;",
     "state_preload_after": "this.game.load.bitmapFont('orange', 'assets/font/orange.png', 'assets/font/orange.fnt');"
   },
@@ -561,7 +561,7 @@
                   "editorName": "collision3",
                   "x": 2543,
                   "y": 2599,
-                  "scale.x": 1.673823311462682,
+                  "scale.x": 3.113845928376527,
                   "scale.y": -186.58033903431894
                 }
               },
@@ -573,7 +573,7 @@
                   "editorName": "collision21",
                   "x": 2004,
                   "y": 388,
-                  "scale.x": 46.564595514482626,
+                  "scale.x": 48.156025721204905,
                   "scale.y": -5.664737954196323
                 }
               },
@@ -654,9 +654,9 @@
                 "asset": "2",
                 "info": {
                   "editorName": "collision28",
-                  "x": 2555,
+                  "x": 2581,
                   "y": 2634,
-                  "scale.x": -191.319007236253,
+                  "scale.x": -191.79901198047574,
                   "scale.y": -3.5788404755047183
                 }
               },
@@ -954,7 +954,7 @@
                 "asset": "2",
                 "info": {
                   "editorName": "collision58",
-                  "x": 551,
+                  "x": 558,
                   "y": 967,
                   "scale.x": -2.915043649427046,
                   "scale.y": 24.139373659158196
@@ -1068,7 +1068,7 @@
                 "info": {
                   "editorName": "zanahoria3",
                   "editorPublic": true,
-                  "x": 470,
+                  "x": 471,
                   "y": -35,
                   "scale.x": 0.7,
                   "scale.y": 0.7
@@ -1741,18 +1741,6 @@
                 }
               },
               {
-                "type": "spritesheet",
-                "id": "5f57b936-142c-4837-a3b8-8733f8d867c0",
-                "asset": "7",
-                "info": {
-                  "editorName": "megaZanahoria",
-                  "x": 827,
-                  "y": 74,
-                  "scale.x": 0.6,
-                  "scale.y": 0.6
-                }
-              },
-              {
                 "type": "atlas-sprite",
                 "id": "0f451b9f-3765-4cba-9bae-900a5e9a3547",
                 "asset": "4",
@@ -1766,7 +1754,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "50e43884-62fc-47a1-afeb-1ca7687551cd",
-                "asset": "8",
+                "asset": "7",
                 "info": {
                   "editorName": "number_1",
                   "x": 1730,
@@ -1798,7 +1786,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "878b44eb-061c-4ad0-8533-786b31635517",
-                "asset": "9",
+                "asset": "8",
                 "info": {
                   "editorName": "three",
                   "x": 1531,
@@ -1828,7 +1816,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "ed2e408e-7c78-4140-85d8-f1ae23c5a8a0",
-                "asset": "10",
+                "asset": "9",
                 "info": {
                   "editorName": "number_2",
                   "x": 861,
@@ -1838,7 +1826,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "c207c056-7e5b-4a7f-8194-832e2392cd52",
-                "asset": "11",
+                "asset": "10",
                 "info": {
                   "editorName": "number_3",
                   "x": 618,
@@ -1850,7 +1838,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "4405a6f7-712a-4a2d-8788-ee0b3efd6885",
-                "asset": "12",
+                "asset": "11",
                 "info": {
                   "editorName": "number_4",
                   "x": 553,
@@ -1860,7 +1848,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "e38c81ae-6939-4130-b653-95960891b676",
-                "asset": "13",
+                "asset": "12",
                 "info": {
                   "editorName": "rock",
                   "x": 1099,
@@ -1870,7 +1858,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "136d9ecf-e512-4b2c-81e2-6e5f66c1a2c0",
-                "asset": "14",
+                "asset": "13",
                 "info": {
                   "editorName": "hongo",
                   "x": 633,
@@ -1880,7 +1868,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "f123090c-c8b8-41cd-820b-d3b2608b00f6",
-                "asset": "15",
+                "asset": "14",
                 "info": {
                   "editorName": "cartel_4",
                   "x": 1819,
@@ -1900,7 +1888,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "c2335f6a-c539-484e-bd04-4e2802523a25",
-                "asset": "16",
+                "asset": "15",
                 "info": {
                   "editorName": "number_5",
                   "x": 1713,
@@ -1910,7 +1898,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "a18890f8-2b5c-4d33-a9e4-1c60772af710",
-                "asset": "17",
+                "asset": "16",
                 "info": {
                   "editorName": "number_6",
                   "x": 2341,
@@ -1920,7 +1908,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "74f1317e-8d50-4c73-b3f1-0ef8b7cfdc71",
-                "asset": "18",
+                "asset": "17",
                 "info": {
                   "editorName": "number_7",
                   "x": 1961,
@@ -1933,12 +1921,12 @@
         {
           "type": "spritesheet",
           "id": "20755ffb-b4c7-4ea0-8f18-767c6af1a14d",
-          "asset": "19",
+          "asset": "18",
           "info": {
             "editorName": "Players",
             "editorPublic": true,
-            "x": 54,
-            "y": 2476,
+            "x": 61,
+            "y": 2491,
             "scale.x": 0.5,
             "scale.y": 0.5,
             "data": "",
@@ -1992,7 +1980,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "70f8a62b-7b08-4b16-880e-f34eda57c8ff",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube",
                   "x": 2848,
@@ -2004,7 +1992,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "93fd3b5e-b112-4e26-9264-9d9cc39c071e",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube2",
                   "x": 2720,
@@ -2016,7 +2004,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "3d582188-79ee-4be8-a23e-dd55f1b8a145",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube1",
                   "x": 2848,
@@ -2028,7 +2016,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "684921e7-f8d3-4d77-8e04-14c24fffce1f",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube3",
                   "x": 2622,
@@ -2040,7 +2028,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "a7647c3d-0053-4770-af29-5b53d0af1070",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube4",
                   "x": 2848,
@@ -2052,7 +2040,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "ddce2214-120f-4c45-a5ed-20eba8f1e38f",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube5",
                   "x": 2688,
@@ -2064,7 +2052,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "caf0ea45-baff-4109-89d7-bbecdea680d1",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube6",
                   "x": 2816,
@@ -2076,7 +2064,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "8789d492-10cf-44ab-aed8-0336441fb018",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube7",
                   "x": 2592,
@@ -2088,7 +2076,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "9aea777c-e82c-4755-b101-dd698a7a648c",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube8",
                   "x": 2848,
@@ -2100,7 +2088,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "1a2bd9c7-6109-4609-8fb5-f4e7d5e43837",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube9",
                   "x": 2624,
@@ -2112,7 +2100,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "5791647d-234e-4b85-be4b-1441920f7d13",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube10",
                   "x": 2848,
@@ -2124,7 +2112,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "b1516732-c5df-4804-98b4-58d7d2880d3a",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube11",
                   "x": 2606,
@@ -2136,7 +2124,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "8acee140-ac8f-4217-b389-1b7b27857f0d",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube12",
                   "x": 2844,
@@ -2148,7 +2136,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "10e1b595-8d07-4380-bd9a-36e320ba34a1",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube13",
                   "x": 2692,
@@ -2160,7 +2148,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "20af8bc8-ed7d-4d46-b29a-3b225e891269",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube14",
                   "x": 2581,
@@ -2172,7 +2160,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "7036d463-ccef-403e-9526-182768edc9f4",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube15",
                   "x": 2846,
@@ -2184,7 +2172,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "055704d9-43a5-41a6-9da5-ebd3b0bf21e3",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube16",
                   "x": 2631,
@@ -2196,7 +2184,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "bdf11997-40e5-4f5c-840f-dda4a1857372",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube17",
                   "x": 2871,
@@ -2208,7 +2196,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "18ec091e-dbf2-4e66-b6a3-8c82b8617918",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube18",
                   "x": 2762,
@@ -2220,7 +2208,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "b87df4c6-c66a-4d77-8a87-7575f4f264c4",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube19",
                   "x": 1578,
@@ -2232,7 +2220,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "14d8d354-0988-46a1-b2bc-6ca7869fce47",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube20",
                   "x": 1875,
@@ -2244,7 +2232,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "c98b29ca-100d-45bc-8f26-427eb9314c8d",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube21",
                   "x": 1634,
@@ -2256,7 +2244,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "b9e0ccbc-a2a4-41f6-a0cb-c30b21a687f9",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube22",
                   "x": 2176,
@@ -2268,7 +2256,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "ff2b1fd6-4402-4e03-bdca-6592039a0bbc",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube23",
                   "x": 575,
@@ -2280,7 +2268,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "2d70d3dc-d628-427d-8035-83759dd41004",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube24",
                   "x": 735,
@@ -2292,7 +2280,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "32b07f5a-c973-4720-ba99-9403863a6d05",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube25",
                   "x": 1204,
@@ -2304,7 +2292,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "51368394-a6f8-4271-9824-4b0324486188",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube26",
                   "x": 1023,
@@ -2316,7 +2304,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "2b3961c4-a82a-4f32-8604-b438ef53614b",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube27",
                   "x": 1219,
@@ -2328,7 +2316,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "1006b1eb-85a6-4726-b5e0-23a47997263e",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube28",
                   "x": 2412,
@@ -2340,7 +2328,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "279b011a-d72c-4f6f-816f-caa261dbec9a",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube29",
                   "x": 1465,
@@ -2352,7 +2340,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "4bc60790-4115-4f0c-9b0f-96a0f9317cbc",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube30",
                   "x": 2434,
@@ -2364,7 +2352,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "acc77984-cd39-4b27-990e-9996e2ffc1cd",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube31",
                   "x": 318,
@@ -2376,7 +2364,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "80876a59-2242-4715-a070-219b7473720f",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube32",
                   "x": 850,
@@ -2388,7 +2376,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "8e5ec33c-d1c3-4862-b53e-1284a1a1c563",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube33",
                   "x": 304,
@@ -2400,7 +2388,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "fbd471ac-6db8-4e70-bfa7-03853099123c",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube34",
                   "x": 1121,
@@ -2412,7 +2400,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "045c261b-dcf4-492c-8769-b4efa3970b43",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube35",
                   "x": 1394,
@@ -2424,7 +2412,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "96df772b-197e-4be4-adf5-46a62d1fd7cc",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube36",
                   "x": 1362,
@@ -2436,7 +2424,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "93a2f90d-7af0-48cf-a863-d3b4f01b7bb8",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube37",
                   "x": 1010,
@@ -2448,7 +2436,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "14db34e0-a601-448c-8035-52081824988e",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube38",
                   "x": 285,
@@ -2460,7 +2448,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "5487dc69-f721-4ebe-891b-2d832399a672",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube39",
                   "x": 527,
@@ -2472,7 +2460,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "03459e00-d869-44d5-8129-347ce9eb78be",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube40",
                   "x": 684,
@@ -2484,7 +2472,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "35be3bc4-8d97-43db-8883-83fe0f7807e5",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube41",
                   "x": 667,
@@ -2496,7 +2484,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "47a50bdf-b972-4423-bf3c-959a8969b6f0",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube42",
                   "x": 5,
@@ -2508,7 +2496,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "cafd533b-d478-40e3-b35c-2472b6e80eb7",
-                "asset": "22",
+                "asset": "21",
                 "info": {
                   "editorName": "nube43",
                   "x": 135,
@@ -2520,7 +2508,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "86756ca1-e30f-4167-9049-897838ecb6d6",
-                "asset": "20",
+                "asset": "19",
                 "info": {
                   "editorName": "nube44",
                   "y": 836,
@@ -2531,7 +2519,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "897d5350-3f09-420d-951d-909ab236cfe4",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube45",
                   "x": 141,
@@ -2543,7 +2531,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "e61e544a-3e70-4dea-9176-ada83e30081d",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube46",
                   "y": 496,
@@ -2554,7 +2542,7 @@
               {
                 "type": "atlas-sprite",
                 "id": "a4dc4123-6e6f-4a7b-8bb4-b26a533b67ed",
-                "asset": "21",
+                "asset": "20",
                 "info": {
                   "editorName": "nube47",
                   "x": 69,
@@ -3002,7 +2990,7 @@
                 "asset": "2",
                 "info": {
                   "editorName": "collision75",
-                  "x": 553,
+                  "x": 558,
                   "y": 1142,
                   "scale.x": 5.331125683450341
                 }
@@ -3110,20 +3098,6 @@
           }
         },
         {
-          "type": "image",
-          "id": "4d82c938-54dc-41df-8fad-39dcc9efe31b",
-          "asset": "23",
-          "info": {
-            "editorName": "barra",
-            "editorPublic": true,
-            "x": 15,
-            "y": 15,
-            "scale.x": 0.5,
-            "scale.y": 0.5,
-            "fixedToCamera": true
-          }
-        },
-        {
           "type": "group",
           "id": "a7f89cb2-5342-4e38-9620-9d42e0c597aa",
           "info": {
@@ -3144,45 +3118,116 @@
               {
                 "type": "image",
                 "id": "83adec73-13e7-4837-95d6-e3e3c3f93016",
-                "asset": "24",
+                "asset": "22",
                 "info": {
                   "editorName": "checkpoint",
                   "editorPublic": true,
-                  "x": 2518,
-                  "y": 2635,
+                  "name": "check5",
+                  "x": 2496,
+                  "y": 2645,
+                  "scale.x": 0.4502120886867625,
+                  "scale.y": 1.7682341868707363
+                }
+              },
+              {
+                "type": "image",
+                "id": "58ee665b-a7af-49f7-b3db-1c5eff56d96b",
+                "asset": "22",
+                "info": {
+                  "editorName": "checkpoint1",
+                  "editorPublic": true,
+                  "name": "check2",
+                  "x": 911,
+                  "y": 2623,
                   "scale.x": 0.34450180868252944,
                   "scale.y": 1.9202201246215993
                 }
               },
               {
                 "type": "image",
-                "id": "58ee665b-a7af-49f7-b3db-1c5eff56d96b",
-                "asset": "24",
+                "id": "c9285330-0f01-4cf4-b91b-e71f96a7543f",
+                "asset": "22",
                 "info": {
-                  "editorName": "checkpoint1",
+                  "editorName": "checkpoint2",
                   "editorPublic": true,
-                  "x": 1345,
-                  "y": 2634,
+                  "name": "check3",
+                  "x": 2298,
+                  "y": 779,
+                  "scale.x": 1.434319089835785,
+                  "scale.y": 0.3787654909945811
+                }
+              },
+              {
+                "type": "image",
+                "id": "cf2b06c3-89f7-4bdf-91a0-f4e6131715e7",
+                "asset": "22",
+                "info": {
+                  "editorName": "checkpoint3",
+                  "editorPublic": true,
+                  "name": "check4",
+                  "x": 1008,
+                  "y": 2243,
+                  "scale.x": 1.8352284215369217,
+                  "scale.y": 0.3787654909945811
+                }
+              },
+              {
+                "type": "image",
+                "id": "7075b7d6-56f9-4b05-be48-5ddf6b917c36",
+                "asset": "22",
+                "info": {
+                  "editorName": "checkpoint4",
+                  "editorPublic": true,
+                  "name": "check7",
+                  "x": 1889,
+                  "y": 2109,
                   "scale.x": 0.34450180868252944,
-                  "scale.y": 1.9202201246215993
+                  "scale.y": 1.4374929822450617
+                }
+              },
+              {
+                "type": "image",
+                "id": "7601e0f0-2f0c-47ba-8478-62b27b066f11",
+                "asset": "22",
+                "info": {
+                  "editorName": "checkpoint5",
+                  "editorPublic": true,
+                  "name": "check6",
+                  "x": 973,
+                  "y": 1308,
+                  "scale.x": 0.28559281614435983,
+                  "scale.y": 1.566765547296147
+                }
+              },
+              {
+                "type": "image",
+                "id": "d79b080e-afc1-42bd-8239-c01917ddeac9",
+                "asset": "22",
+                "info": {
+                  "editorName": "checkpoint6",
+                  "editorPublic": true,
+                  "name": "check1",
+                  "x": 261,
+                  "y": 648,
+                  "scale.x": 1.8352284215369217,
+                  "scale.y": 0.3787654909945811
+                }
+              },
+              {
+                "type": "image",
+                "id": "c4fe61bb-c26e-47cd-bfcf-f10772f5392a",
+                "asset": "22",
+                "info": {
+                  "editorName": "checkpoint7",
+                  "editorPublic": true,
+                  "name": "check9",
+                  "x": 216,
+                  "y": 1004,
+                  "scale.x": 0.4238648731398037,
+                  "scale.y": 1.9639926630965938
                 }
               }
             ]
-          }
-        },
-        {
-          "type": "image",
-          "id": "9b1ed9a6-2562-4a39-a25d-b3d65303c135",
-          "asset": "25",
-          "info": {
-            "editorName": "tick",
-            "editorPublic": true,
-            "x": 550,
-            "y": 300,
-            "alpha": 0,
-            "fixedToCamera": true,
-            "anchor.x": 0.5,
-            "anchor.y": 0.5
           }
         },
         {
@@ -3204,17 +3249,154 @@
                 "value": "false"
               }
             ],
+            "children": [
+              {
+                "type": "image",
+                "id": "b8a87995-3c60-4657-a024-67dce60234ce",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel",
+                  "name": "inicio5",
+                  "x": 1456,
+                  "y": 2255,
+                  "scale.x": 0.04686664652910362,
+                  "scale.y": 1.9202201246215993
+                }
+              },
+              {
+                "type": "image",
+                "id": "bead2c07-a64d-4d0b-ac60-8ee39c71ab46",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel1",
+                  "name": "inicio4",
+                  "x": 1489,
+                  "y": 1220,
+                  "scale.x": 2.495730346162737,
+                  "scale.y": 0.04522013725618172
+                }
+              },
+              {
+                "type": "image",
+                "id": "0e6fee59-25a4-4d7b-9a33-ae705563c96e",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel2",
+                  "name": "inicio3",
+                  "x": 1215,
+                  "y": 287,
+                  "scale.x": 2.495730346162737,
+                  "scale.y": 0.04522013725618172
+                }
+              },
+              {
+                "type": "image",
+                "id": "2e898712-4382-411c-8ac4-ed12ee23cd96",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel3",
+                  "name": "inicio7",
+                  "x": 1913,
+                  "y": 1966,
+                  "scale.x": 1.5957294906830233,
+                  "scale.y": 0.08612895082536108
+                }
+              },
+              {
+                "type": "image",
+                "id": "54028da6-d8bb-4c51-8991-5d63054ef026",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel4",
+                  "name": "inicio6",
+                  "x": -89,
+                  "y": 1512,
+                  "scale.x": 1.529621256319504,
+                  "scale.y": 0.03343827068397805
+                }
+              },
+              {
+                "type": "image",
+                "id": "18a389c7-7182-4718-b049-ca2ed6e02bca",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel5",
+                  "name": "inicio1",
+                  "x": 621,
+                  "y": 296,
+                  "scale.x": 1.5767490403606153,
+                  "scale.y": 0.05700165441591498
+                }
+              },
+              {
+                "type": "image",
+                "id": "a1a82cc5-723c-481c-af46-82521388fe48",
+                "asset": "22",
+                "info": {
+                  "editorName": "newLevel6",
+                  "name": "inicio9",
+                  "x": 162,
+                  "y": 868,
+                  "scale.x": 1.5767490403606153,
+                  "scale.y": 0.17482031213118213
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "id": "9b1ed9a6-2562-4a39-a25d-b3d65303c135",
+          "asset": "23",
+          "info": {
+            "editorName": "tick",
+            "editorPublic": true,
+            "x": 550,
+            "y": 300,
+            "alpha": 0,
+            "fixedToCamera": true,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "image",
+          "id": "4d82c938-54dc-41df-8fad-39dcc9efe31b",
+          "asset": "24",
+          "info": {
+            "editorName": "barra",
+            "editorPublic": true,
+            "x": 16,
+            "y": 15,
+            "scale.x": 0.5,
+            "scale.y": 0.5,
+            "fixedToCamera": true
+          }
+        },
+        {
+          "type": "group",
+          "id": "dd7bf050-e15e-4c76-852c-2764139cb794",
+          "info": {
+            "editorName": "ZanahoriaFinal",
+            "editorPublic": true,
+            "alpha": 0,
+            "renderable": false,
+            "physicsGroup": true,
+            "setAll": [{
+              "key": "body.allowGravity",
+              "value": "false"
+            }],
             "children": [{
-              "type": "image",
-              "id": "b8a87995-3c60-4657-a024-67dce60234ce",
-              "asset": "24",
+              "type": "spritesheet",
+              "id": "5f57b936-142c-4837-a3b8-8733f8d867c0",
+              "asset": "25",
               "info": {
-                "editorName": "newLevel",
-                "name": "inicio5",
-                "x": 1456,
-                "y": 2255,
-                "scale.x": 0.04686664652910362,
-                "scale.y": 1.9202201246215993
+                "editorName": "megaZanahoria",
+                "editorPublic": true,
+                "x": 827,
+                "y": 74,
+                "scale.x": 0.6,
+                "scale.y": 0.6
               }
             }]
           }
@@ -3269,113 +3451,113 @@
     "7": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
-      "asset": "megaZanahoria",
-      "sprite": "0"
+      "asset": "tile",
+      "sprite": "number-3"
     },
     "8": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "number-3"
+      "sprite": "three"
     },
     "9": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "three"
+      "sprite": "number-1"
     },
     "10": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "number-1"
+      "sprite": "number-9"
     },
     "11": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "number-9"
+      "sprite": "number-6"
     },
     "12": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "number-6"
+      "sprite": "rock"
     },
     "13": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "rock"
+      "sprite": "hongo"
     },
     "14": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "hongo"
+      "sprite": "cartel_02"
     },
     "15": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "cartel_02"
+      "sprite": "number-4"
     },
     "16": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "number-4"
+      "sprite": "number-7"
     },
     "17": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tile",
-      "sprite": "number-7"
-    },
-    "18": {
-      "file": "WebContent/assets/pack.json",
-      "section": "level",
-      "asset": "tile",
       "sprite": "number-5"
     },
-    "19": {
+    "18": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "player",
       "sprite": "0"
     },
-    "20": {
+    "19": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tiles1",
       "sprite": "nube2"
     },
-    "21": {
+    "20": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tiles1",
       "sprite": "nube1"
     },
-    "22": {
+    "21": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tiles1",
       "sprite": "nube3"
     },
-    "23": {
-      "file": "WebContent/assets/pack.json",
-      "section": "level",
-      "asset": "barra"
-    },
-    "24": {
+    "22": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "checkpoint"
     },
-    "25": {
+    "23": {
       "file": "WebContent/assets/pack.json",
       "section": "level",
       "asset": "tick"
+    },
+    "24": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "barra"
+    },
+    "25": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "megaZanahoria",
+      "sprite": "0"
     }
   },
   "prefab-table": {}

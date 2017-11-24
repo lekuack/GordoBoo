@@ -1,0 +1,70 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "Preload",
+    "sceneWidth": 1100,
+    "sceneHeight": 600,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true,
+    "create_after": "this.game.time.events.add(3000, TimerLoad, this);"
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "rendererRoundPixels": true,
+    "autoLoad": true,
+    "preloadSpriteId": "d8dcc946-dc01-42dd-b424-b9cf37ea439a",
+    "preloadSprite_direction": 0,
+    "load.pack": [{
+      "file": "WebContent/assets/pack.json",
+      "section": "level"
+    }]
+  },
+  "world": {
+    "type": "group",
+    "id": "5ecb3dc0-6ace-4f81-a568-41a765c43e07",
+    "info": {
+      "editorName": "Preload",
+      "setAll": [],
+      "children": [{
+        "type": "image",
+        "id": "d8dcc946-dc01-42dd-b424-b9cf37ea439a",
+        "asset": "0",
+        "info": {
+          "editorName": "loading",
+          "editorPublic": true,
+          "x": 550,
+          "y": 300,
+          "anchor.x": 0.5,
+          "anchor.y": 0.5
+        }
+      }]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {"0": {
+    "file": "WebContent/assets/pack.json",
+    "section": "level",
+    "asset": "loading"
+  }},
+  "prefab-table": {}
+}

@@ -1,0 +1,91 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "GameOver",
+    "sceneWidth": 1100,
+    "sceneHeight": 600,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      64,
+      0,
+      64
+    ],
+    "gridColor": [
+      192,
+      192,
+      192
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      44,
+      23,
+      56
+    ],
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "314afab2-f09d-48d6-a0e7-481e0a5e060b",
+    "info": {
+      "editorName": "GameOver",
+      "setAll": [],
+      "children": [
+        {
+          "type": "image",
+          "id": "63248c84-b2c1-412a-9d1e-7fa8c3e09d5a",
+          "asset": "0",
+          "info": {
+            "editorName": "gameOvers",
+            "editorPublic": true,
+            "x": 550,
+            "y": 300,
+            "scale.x": 0.75,
+            "scale.y": 0.75,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "button",
+          "id": "723bb27b-0504-45d9-9e11-424afba7a9bb",
+          "asset": "1",
+          "info": {
+            "editorName": "btn_start",
+            "x": 550,
+            "y": 419,
+            "scale.x": 0.98,
+            "anchor.x": 0.5,
+            "callback": "actionOnClick",
+            "overFrame": "1"
+          }
+        }
+      ]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "gameOvers"
+    },
+    "1": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "btn-start",
+      "sprite": "0"
+    }
+  },
+  "prefab-table": {}
+}

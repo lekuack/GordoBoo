@@ -1,0 +1,65 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "Finish",
+    "sceneWidth": 1100,
+    "sceneHeight": 600,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "f60e2560-c06c-4cbd-aa8b-6e338224aa41",
+    "info": {
+      "editorName": "Finish",
+      "setAll": [],
+      "children": [{
+        "type": "image",
+        "id": "3aaa8bc9-d844-44ee-9ec9-75c304480b20",
+        "asset": "0",
+        "info": {
+          "editorName": "finish",
+          "editorPublic": true,
+          "x": 550,
+          "y": 300,
+          "anchor.x": 0.5,
+          "anchor.y": 0.5
+        }
+      }]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {"0": {
+    "file": "WebContent/assets/pack.json",
+    "section": "level",
+    "asset": "finish"
+  }},
+  "prefab-table": {}
+}

@@ -1,0 +1,91 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "Menu",
+    "sceneWidth": 1100,
+    "sceneHeight": 600,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "gridColor": [
+      192,
+      192,
+      192
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "a24fcb15-7a19-4232-923d-21822f3ea8fd",
+    "info": {
+      "editorName": "Menu",
+      "setAll": [],
+      "children": [
+        {
+          "type": "image",
+          "id": "624502e8-8dc9-4320-93e7-ded66a093df6",
+          "asset": "0",
+          "info": {
+            "editorName": "menu",
+            "editorPublic": true,
+            "x": 550,
+            "y": 300,
+            "scale.x": 0.75,
+            "scale.y": 0.75,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "button",
+          "id": "96bd2263-3bb9-4a28-9d3e-87ad266ab0da",
+          "asset": "1",
+          "info": {
+            "editorName": "btnPlay1",
+            "x": 198,
+            "y": 458,
+            "scale.x": 0.75,
+            "scale.y": 0.75,
+            "callback": "actionOnClick",
+            "overFrame": "1"
+          }
+        }
+      ]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "menu1"
+    },
+    "1": {
+      "file": "WebContent/assets/pack.json",
+      "section": "level",
+      "asset": "btnPlay",
+      "sprite": "0"
+    }
+  },
+  "prefab-table": {}
+}
